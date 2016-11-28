@@ -118,7 +118,18 @@ class Housing {
             garageBlacklists[] = {{5909.93,10491.9,-0.153875}};
             lightPos[] = {0.5,0.5,7.5};
         };
-        
+        //DONE
+		class Land_HouseDoubleAL {
+            price = 1500000;
+            numberCrates = 5;
+            restrictedPos[] = {};
+            canGarage = true;
+            garageSpawnPos[] = {-6.241684,-17.72266,0.46744};
+            garageSpawnDir = 0;
+            garageBlacklists[] = {{5909.93,10491.9,-0.153875}};
+            lightPos[] = {0.5,0.5,7.5};
+        };
+		
         class Land_HouseB {
             price = 750000;
             numberCrates = 2;
@@ -129,24 +140,24 @@ class Housing {
             garageBlacklists[] = {};
             lightPos[] = {0,1,3};
         };
-        
+        //DONE
         class Land_HouseB1 {
             price = 750000;
             numberCrates = 2;
             restrictedPos[] = {};
             canGarage = true;
-            garageSpawnPos[] = {0.241684,-5.72266,-1.46744};
+            garageSpawnPos[] = {-9.241684,-4.72266,0.46744};
             garageSpawnDir = 90;
             garageBlacklists[] = {{10998,9698.24,-0.219376}};
             lightPos[] = {0,0,2};
         };
-        
+        //DONE
         class Land_HouseC1_L {
             price = 750000;
             numberCrates = 2;
             restrictedPos[] = {};
             canGarage = true;
-            garageSpawnPos[] = {12.8365,0.414551,-1.81252};
+            garageSpawnPos[] = {-9.241684,-4.72266,0.46744};
             garageSpawnDir = 0;
             garageBlacklists[] = {};
             lightPos[] = {0,0,2};
