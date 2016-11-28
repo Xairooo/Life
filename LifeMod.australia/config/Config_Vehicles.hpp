@@ -25,7 +25,11 @@ class CarShops {
             { "C_Offroad_01_F", "" },
             { "C_SUV_01_F", "" },
             { "C_Hatchback_01_sport_F", "" },
-            { "C_Van_01_transport_F", "" }
+            { "C_Van_01_transport_F", "" },
+            { "ivory_190e", "" },
+            { "ivory_mp4", "" },
+            { "ivory_rs4", "" },
+            { "ivory_evox", "" }
         };
     };
 
@@ -118,6 +122,12 @@ class CarShops {
             { "C_SUV_01_F", "" },
             { "C_Hatchback_01_sport_F", "call life_coplevel >= 1" },
             { "B_MRAP_01_F", "call life_coplevel  >= 2" },
+            { "bv_the_crowner_cop_patrol", "call life_coplevel  >= 2" },
+            { "bv_e60_m5_cop_patrol", "call life_coplevel  >= 2" },
+            { "bv_gtr_spec_v_cop_patrol", "call life_coplevel  >= 2" },
+            { "bv_shelly_cop_patrol", "call life_coplevel  >= 3" },
+            { "bv_458_cop_patrol", "call life_coplevel  >= 3" },
+            { "bv_caressa_gt_cop_patrol", "call life_coplevel  >= 3" },
             { "B_MRAP_01_hmg_F", "call life_coplevel >= 3" }
         };
     };
@@ -175,6 +185,80 @@ class LifeCfgVehicles {
         price = -1;
         textures[] = {};
     };
+
+    /////////// Modded Cars
+
+    class bv_caressa_gt_cop_patrol {
+        vItemSpace = 50;
+        conditions = "";
+        price = 700000;
+        textures[] = {};
+    };
+
+    class bv_458_cop_patrol {
+        vItemSpace = 50;
+        conditions = "";
+        price = 700000;
+        textures[] = {};
+    };
+
+    class bv_shelly_cop_patrol {
+        vItemSpace = 75;
+        conditions = "";
+        price = 700000;
+        textures[] = {};
+    };
+
+    class bv_gtr_spec_v_cop_patrol {
+        vItemSpace = 50;
+        conditions = "";
+        price = 700000;
+        textures[] = {};
+    };
+
+    class bv_e60_m5_cop_patrol {
+        vItemSpace = 50;
+        conditions = "";
+        price = 700000;
+        textures[] = {};
+    };
+
+    class bv_the_crowner_cop_patrol {
+        vItemSpace = 50;
+        conditions = "";
+        price = 700000;
+        textures[] = {};
+    };
+
+    class ivory_mp4 {
+        vItemSpace = 70;
+        conditions = "license_civ_driver";
+        price = 900000;
+        textures[] = {};
+    };
+
+    class ivory_rs4 {
+        vItemSpace = 70;
+        conditions = "license_civ_driver";
+        price = 400000;
+        textures[] = {};
+    };
+
+    class ivory_evox {
+        vItemSpace = 70;
+        conditions = "license_civ_driver";
+        price = 200000;
+        textures[] = {};
+    };
+
+    class ivory_190e {
+        vItemSpace = 70;
+        conditions = "license_civ_driver";
+        price = 100000;
+        textures[] = {};
+    };
+
+    ////////// End of Modded Cars
 
     class I_Truck_02_medical_F {
         vItemSpace = 150;
