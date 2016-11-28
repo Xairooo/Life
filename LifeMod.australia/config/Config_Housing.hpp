@@ -108,8 +108,8 @@ class Housing {
     class australia {
 
         // Houses with Garages
-        class Land_Hotel_01_F {
-            price = 960000;
+        class Land_HouseDoubleAL2 {
+            price = 1500000;
             numberCrates = 5;
             restrictedPos[] = {};
             canGarage = true;
@@ -119,9 +119,9 @@ class Housing {
             lightPos[] = {0.5,0.5,7.5};
         };
         
-        class Land_Hotel_02_F {
-            price = 2000000;
-            numberCrates = 8;
+        class Land_HouseB {
+            price = 750000;
+            numberCrates = 2;
             restrictedPos[] = {};
             canGarage = true;
             garageSpawnPos[] = {14.1128,1.51736,-4.18449};
@@ -130,9 +130,9 @@ class Housing {
             lightPos[] = {0,1,3};
         };
         
-        class Land_GarageShelter_01_F {
-            price = 80000;
-            numberCrates = 1;
+        class Land_HouseB1 {
+            price = 750000;
+            numberCrates = 2;
             restrictedPos[] = {};
             canGarage = true;
             garageSpawnPos[] = {0.241684,-5.72266,-1.46744};
@@ -141,8 +141,8 @@ class Housing {
             lightPos[] = {0,0,2};
         };
         
-        class Land_House_Big_02_F {
-            price = 450000;
+        class Land_HouseC1_L {
+            price = 750000;
             numberCrates = 2;
             restrictedPos[] = {};
             canGarage = true;
@@ -152,9 +152,9 @@ class Housing {
             lightPos[] = {0,0,2};
         };
         
-        class Land_School_01_F {
-            price = 3000000;
-            numberCrates = 8;
+        class Land_HouseC_R {
+            price = 750000;
+            numberCrates = 2;
             restrictedPos[] = {};
             canGarage = true;
             garageSpawnPos[] = {-6.91215,-11.5288,-1.70768};
@@ -163,8 +163,8 @@ class Housing {
             lightPos[] = {0,0,2.65};
         };
         
-        class Land_House_Big_04_F {
-            price = 140000;
+        class Land_HouseA {
+            price = 750000;
             numberCrates = 2;
             restrictedPos[] = {};
             canGarage = false;
@@ -174,9 +174,9 @@ class Housing {
             lightPos[] = {0,0,3.5};
         };
         
-        class Land_House_Big_03_F {
-            price = 900000;
-            numberCrates = 3;
+        class Land_HouseA1 {
+            price = 750000;
+            numberCrates = 2;
             restrictedPos[] = {};
             canGarage = true;
             garageSpawnPos[] = {14.9072,0.394043,-3.60528};
