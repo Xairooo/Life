@@ -165,6 +165,9 @@
 	class H_Cap_red 								{ quality = 1; price = 6; };
 	class H_Cap_tan 								{ quality = 1; price = 6; };
 	class H_Cap_tan_specops_US 						{ quality = 1; price = 6; };
+	class G_Combat									{ quality = 1; price = 6; };
+	class G_Combat_Goggles_tna_F					{ quality = 1; price = 6; };
+	class G_Goggles_VR								{ quality = 1; price = 6; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Military Caps

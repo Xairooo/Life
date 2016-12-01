@@ -8,6 +8,13 @@ if (isDedicated || isServer) then {
 	};
 };
 
+if (hasInterface) then {
+   []execVM "Snow\snowEffects.sqf"; 
+   []execVM "Snow\snowScreen.sqf";
+};
+
+waitUntil {time > 0};
+enableEnvironment false;
 
 //Scripts
 [] execVM "custom\EnigmaRevive\init.sqf";

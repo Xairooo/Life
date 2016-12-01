@@ -136,6 +136,7 @@
 			//"GREFHeadgear",
 			"TRYKHeadgear",
 			"Uniforms",
+			"Glasses",
 			"APEXUniforms",
 			//"HAPUNIFORMS",
 			//"RHSUniforms",
@@ -154,7 +155,7 @@
 			//"MASBackpacks",
 			"TRYKBackpacks",
 			"Tools",
-			//"APEXTools",
+			"APEXTools",
 			//"MASTools",
 			"FirstAid"
 		};

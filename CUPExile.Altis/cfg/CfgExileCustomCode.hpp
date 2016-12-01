@@ -10,7 +10,7 @@ class CfgExilecustomCode
 	ExileClient_gui_xm8_slide = "ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_slide.sqf";
 	ExileClient_gui_xm8_show = "ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
 
-	ExileClient_system_snow_thread_update = "ExileClient_system_snow_thread_update.sqf";
+	ExileClient_system_snow_thread_update = "Snow\ExileClient_system_snow_thread_update.sqf";
 	
 	//Base Spawning
 	ExileClient_gui_selectSpawnLocation_event_onSpawnButtonClick = "custom\DTG_Spawn_Override\ExileClient_gui_selectSpawnLocation_event_onSpawnButtonClick.sqf";
