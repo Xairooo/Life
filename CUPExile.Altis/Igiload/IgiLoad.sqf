@@ -1593,6 +1593,30 @@ if (isnil "IL_Procedures") then
 					_free_slots = abs((_v getVariable "slots_num_r") - (_v getVariable "box_num_r"));
 				};
 			};
+			
+	// ADDDDDDDDEDDDDDDDDD FOOOOOOOOOOOOOOORRRRRRRRRRRRRRRRR SELLLLLLLLLLLLLLLL CRATES
+	private _foundTrader = false;
+	{
+	_foundTrader = true;
+	} forEach nearestObjects [player, ["Exile_Trader_WasteDump"], 12];
+
+	if (_foundTrader) then {
+	
+		private _crate = nearestObjects [player, ["IL_Supported_Veh_Ammo"], 50];
+		private _cargo = _crate call ExileClient_util_containerCargo_list;	
+		private _revenue = _cargo call ExileClient_util_gear_calculateTotalSellPrice;
+		hint format ["Cargo was sold for %1 Poptabs. You can pick them up from the crate.", _revenue];
+		//str(_revenue);
+		
+		clearWeaponCargoGlobal 		_crate;
+		clearItemCargoGlobal 		_crate;
+		clearMagazineCargoGlobal 	_crate;
+		clearBackpackCargoGlobal 	_crate;
+		
+		private _cash = _crate getVariable ["ExileMoney", 0];
+	
+		_crate setVariable ["ExileMoney",_revenue+_cash, true];
+	};
 		}
 		else
 		{
