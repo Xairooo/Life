@@ -29,4 +29,16 @@ else
 	onPlayerConnected {[_uid, _name] call ExileServer_system_network_event_onPlayerConnected};
 	onPlayerDisconnected {[_uid, _name] call ExileServer_system_network_event_onPlayerDisconnected};
 };
-addMissionEventHandler ["HandleDisconnect", { _this call ExileServer_system_network_event_onHandleDisconnect; }];
+//Temp Call fix by silverado.
+onPlayerDisconnected {
+    params ["_id", "_uid", "_name"];
+    _unit = objNull;
+    {
+        if ((_x getVariable["PUID", "0"]) == _uid) exitWith {
+            _unit = _x;
+        };
+    } forEach allUnits;
+    [_unit,_id,_uid,_name] call ExileServer_system_network_event_onHandleDisconnect;
+};
+
+//addMissionEventHandler ["HandleDisconnect", { _this call ExileServer_system_network_event_onHandleDisconnect; }];
