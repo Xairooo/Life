@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Server Settings - Modify at will
 ///////////////////////////////////////////////////////////////////////////////
-author = "Exile Mod Team - Modded by EliteWarfare";
+author = "Exile Mod Team - Modded by EliteWarfare , Silverado";
 onLoadName = "ExileZombie Mod";
 onLoadMission= "exilezombies.com";
 loadScreen = ""; 
@@ -86,15 +86,7 @@ class RscTitles
 {	
 	#include "ExAdClient\RscTitles.cpp"
 	#include "KillMessages.hpp"
-    #include "CfgSnowGui.hpp"
 };
-
-class CfgSounds
-{
-    #include "CfgAmbSounds.hpp"
-    #include "CfgWindSounds.hpp"
-};
-
 
 class CfgHints
 {
