@@ -170,8 +170,8 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// Arma 3 Planes
 	///////////////////////////////////////////////////////////////////////////////
-	class B_Plane_CAS_01_F 	                			{ quality = 5; price = 550000; };
-	class O_Plane_CAS_02_F 	                			{ quality = 5; price = 550000; };
-	class I_Plane_Fighter_03_CAS_F	                	{ quality = 6; price = 550000; }; 
-	class I_Plane_Fighter_03_AA_F	                	{ quality = 6; price = 550000; }; 
+	class B_Plane_CAS_01_F 	                			{ quality = 5; price = 2050000; };
+	class O_Plane_CAS_02_F 	                			{ quality = 5; price = 2050000; };
+	class I_Plane_Fighter_03_CAS_F	                	{ quality = 6; price = 2050000; }; 
+	class I_Plane_Fighter_03_AA_F	                	{ quality = 6; price = 2050000; }; 
 	

@@ -101,7 +101,7 @@
 			"Navigation",
 			"ExplosiveWeapons",
 			"Explosives",
-			//"A3Launchers",
+			"A3Launchers",
 			"ApexLaunchers",
 			"CUPLaunchers",
 			//"MASLaunchers",
@@ -111,7 +111,7 @@
 			//"MASLauncherAmmo",
 			//"R3FLauncherAmmo",
 			//"RHSLauncherAmmo",
-			//"A3LauncherAmmo",
+			"A3LauncherAmmo",
 			"APEXLauncherAmmo",
 			"CUPExplosive",
 			//"MASExplosive",
@@ -150,7 +150,7 @@
 			"TRYKVests",
 			"Backpacks",
 			"APEXBackpacks",
-			//"A3Backpacks",
+			"A3Backpacks",
 			//"HAPBACKPACKS",
 			//"MASBackpacks",
 			"TRYKBackpacks",
@@ -202,11 +202,11 @@
 		{
 			"Bikes",
 			"Cars",
-			//"A3Cars",
+			"A3Cars",
 			"ApexCars",
 			//"HAPCARS",
 			//"HVPCars",
-			//"JonzieCars",
+			"JonzieCars",
 			//"MASCars",
 			"CUPUnarmed",
 			"ApexTrucks",
@@ -220,12 +220,12 @@
 			//"GREFUnarmed",
 			//"CTrucks",
 			"Trucks",
-			//"A3Trucks",
+			"A3Trucks",
 			//"CUGVs",
 			//"MASTanks"
-			//"A3Tanks"	
+			"A3Tanks",	
 			//"UGV"	
-			//"A3UGVs"	
+			"A3UGVs",	
 			"ApexUAVs"
 		};
 	};
@@ -246,10 +246,10 @@
 			//"MASChoppers",
 			//"RHSChoppers",
 			//"GREFChoppers",
-			//"A3unarmedChoppers",
-			//"A3armedChoppers",
+			"A3unarmedChoppers",
+			"A3armedChoppers",
 			"Planes",
-			//"A3Planes",
+			"A3Planes",
 			"ApexPlanes",
 			//"CPlanes",
 			//"HVPPlanes",
@@ -257,7 +257,7 @@
 			//"RHSPlanes",
 			//"GREFPlanes",
 			//"CUAVs",
-			//"A3UAVs",
+			"A3UAVs",
 			"Pods"		
 		};
 	};

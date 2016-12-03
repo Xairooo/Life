@@ -1,4 +1,4 @@
-	/*class A3Cars
+	class A3Cars
 	{
 		name = "Arma 3 Cars";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
@@ -16,8 +16,8 @@
 			"I_G_Quadbike_01_F", 
 			"I_MRAP_03_F"
 		};
-	};*/
-	/*class A3Trucks
+	};
+	class A3Trucks
 	{
 		name = "Arma 3 Trucks";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
@@ -60,7 +60,7 @@
 			"I_G_Van_01_transport_F", 
 			"I_G_Van_01_fuel_F"
 		};
-	};*/
+	};
 	
 	class A3Armed
 	{
@@ -76,7 +76,7 @@
 		};
 	};
 	
-	/*class A3Tanks
+	class A3Tanks
 	{
 		name = "Arma 3 Tanks and Tracked";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\gps_ca.paa";
@@ -96,7 +96,7 @@
 			"I_APC_tracked_03_cannon_F",
 			"I_MBT_03_cannon_F"
 		};
-	};*/
+	};
 
 	class A3Boats
 	{
@@ -158,7 +158,7 @@
 		};
 	};	
 	
-	/*class A3unarmedChoppers
+	class A3unarmedChoppers
 	{
 		name = "Arma 3 unarmed Helicopters";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
@@ -188,7 +188,7 @@
 			"O_Heli_Light_02_unarmed_F",
 			"I_Heli_Transport_02_F"
 		};
-	};*/
+	};
 	
 	class A3armedChoppers
 	{
@@ -204,6 +204,19 @@
 			"O_Heli_Light_02_F", 
 			"O_Heli_Light_02_v2_F",
 			"I_Heli_light_03_F"
+		};
+	};
+
+	class A3Planes
+	{
+		name = "Arma 3 Planes";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"B_Plane_CAS_01_F", 
+			"O_Plane_CAS_02_F",
+			"I_Plane_Fighter_03_CAS_F",
+			"I_Plane_Fighter_03_AA_F"
 		};
 	};
 	
