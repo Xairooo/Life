@@ -16,8 +16,7 @@ class CfgExilecustomCode
 	ExileClient_gui_selectSpawnLocation_event_onSpawnButtonClick = "custom\DTG_Spawn_Override\ExileClient_gui_selectSpawnLocation_event_onSpawnButtonClick.sqf";
 	ExileClient_gui_selectSpawnLocation_show = "custom\DTG_Spawn_Override\ExileClient_gui_selectSpawnLocation_show.sqf";
 	
-	ExileClient_object_player_death_startBleedingOut = "custom\EnigmaRevive\ExileClient_object_player_death_startBleedingOut.sqf"; //Happys Revive
-	ExileClient_object_player_event_onInventoryOpened = "custom\EnigmaRevive\ExileClient_object_player_event_onInventoryOpened.sqf"; //Happys Revive AntiDupe ---NEW with v0.65
+		ExileClient_object_player_event_onInventoryOpened = "custom\EnigmaRevive\ExileClient_object_player_event_onInventoryOpened.sqf"; //Happys Revive AntiDupe ---NEW with v0.65
 	
 	//Igiload
 	ExileClient_object_player_event_onEnterSafezone = "ExileClient_object_player_event_onEnterSafezone.sqf";
