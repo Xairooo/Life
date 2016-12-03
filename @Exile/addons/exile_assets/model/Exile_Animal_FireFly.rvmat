@@ -1,0 +1,7 @@
+ambient[] 			= {1.0, 1.0, 1.0, 1.0};
+diffuse[] 			= {0.0, 0.0, 0.0, 1.0};
+forcedDiffuse[] 	= {0.0, 0.0, 0.0, 0.0};
+emmisive[] 			= {500.0, 500.0, 500.0, 5.0};
+specular[] 			= {0.0, 0.0, 0.0, 1.0};
+specularPower 		= 1.0;
+renderFlags[] 		= {"NoZWrite", "AddBlend"};
