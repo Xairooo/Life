@@ -9,14 +9,12 @@ class CfgExilecustomCode
 	ExileServer_system_territory_database_load = "ExAdClient\VirtualGarage\CustomCode\ExileServer_system_territory_database_load.sqf";
 	ExileClient_gui_xm8_slide = "ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_slide.sqf";
 	ExileClient_gui_xm8_show = "ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
-
-	ExileClient_system_snow_thread_update = "Snow\ExileClient_system_snow_thread_update.sqf";
 	
 	//Base Spawning
 	ExileClient_gui_selectSpawnLocation_event_onSpawnButtonClick = "custom\DTG_Spawn_Override\ExileClient_gui_selectSpawnLocation_event_onSpawnButtonClick.sqf";
 	ExileClient_gui_selectSpawnLocation_show = "custom\DTG_Spawn_Override\ExileClient_gui_selectSpawnLocation_show.sqf";
 	
-		ExileClient_object_player_event_onInventoryOpened = "custom\EnigmaRevive\ExileClient_object_player_event_onInventoryOpened.sqf"; //Happys Revive AntiDupe ---NEW with v0.65
+	ExileClient_object_player_event_onInventoryOpened = "custom\EnigmaRevive\ExileClient_object_player_event_onInventoryOpened.sqf"; //Happys Revive AntiDupe ---NEW with v0.65
 	
 	//Igiload
 	ExileClient_object_player_event_onEnterSafezone = "ExileClient_object_player_event_onEnterSafezone.sqf";
