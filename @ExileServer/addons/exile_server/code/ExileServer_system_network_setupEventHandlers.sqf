@@ -12,7 +12,7 @@
 if(getNumber(configFile >> "CfgSettings" >> "CBA" >> "useStackedEH") isEqualTo 1)then
 {
 	["ExileOnPlayerConnected", "onPlayerConnected", { [_uid, _name] call ExileServer_system_network_event_onPlayerConnected; }] call BIS_fnc_addStackedEventHandler;
-	["ExileOnPlayerDisconnected", "onPlayerDisconnected", { [_uid, _name] call ExileServer_system_network_event_onPlayerDisconnected; }] call BIS_fnc_addStackedEventHandler;
+	["ExileOnPlayerDisconnected", "onPlayerDisconnected", { [_id, _uid, _name] call ExileServer_system_network_event_onPlayerDisconnected; }] call BIS_fnc_addStackedEventHandler;
 	"Added STACKED EH!" call ExileServer_util_log;
 	if (getNumber(configFile >> "CfgSettings" >> "CBA" >> "iReallyWantToGetHackedAndImRetarded") isEqualTo 1)then
 	{
@@ -27,18 +27,8 @@ if(getNumber(configFile >> "CfgSettings" >> "CBA" >> "useStackedEH") isEqualTo 1
 else
 {
 	onPlayerConnected {[_uid, _name] call ExileServer_system_network_event_onPlayerConnected};
-	onPlayerDisconnected {[_uid, _name] call ExileServer_system_network_event_onPlayerDisconnected};
+	onPlayerDisconnected {[_id, _uid, _name] call ExileServer_system_network_event_onPlayerDisconnected};
 };
-//Temp Call fix by silverado.
-onPlayerDisconnected {
-    params ["_id", "_uid", "_name"];
-    _unit = objNull;
-    {
-        if ((_x getVariable["PUID", "0"]) == _uid) exitWith {
-            _unit = _x;
-        };
-    } forEach allUnits;
-    [_unit,_id,_uid,_name] call ExileServer_system_network_event_onHandleDisconnect;
-};
+
 
 //addMissionEventHandler ["HandleDisconnect", { _this call ExileServer_system_network_event_onHandleDisconnect; }];

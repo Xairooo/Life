@@ -9,6 +9,11 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
+BIS_DeathBlur ppEffectAdjust [0];
+BIS_DeathBlur ppEffectCommit 0;
+BIS_DeathBlur ppEffectEnable false;
+
+ 
 if (_this) then
 {
 	ExileClientPostProcessingBackgroundBlur ppEffectAdjust [2];
