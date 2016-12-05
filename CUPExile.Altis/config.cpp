@@ -819,6 +819,20 @@ class CfgInteractionMenus
 
 		class Actions 
 		{
+  	      	class Grind : ExileAbstractAction
+     	  	{
+          	  	title = "Grind Lock";
+        	    condition = "call ExAd_fnc_canGrindLock";
+            	action = "_this spawn ExAd_fnc_grindLock";
+        	};
+
+        	class RestoreLock : ExileAbstractAction
+        	{
+            	title = "Restore Lock";
+            	condition = "_object call ExAd_fnc_canRestoreLock";
+            	action = "_this spawn ExAd_fnc_restoreLock";
+        	};
+			
 			class ScanLock: ExileAbstractAction
 			{
 				title = "Scan Lock";
@@ -920,14 +934,20 @@ class CfgInteractionMenus
 
 		class Actions
 		{
-			/*
+			class HackVG : ExileAbstractAction
+       		{
+            	title = "Hack Virtual Garage";
+            	condition = "call ExAd_fnc_canHackVG";
+            	action = "_this spawn ExAd_fnc_startHack";
+        	};
+
 			class Manage : ExileAbstractAction
 			{
 				title = "Manage";
 				condition = "true";
 				action = "_this call ExileClient_gui_baseManagement_event_show";
 			};
-			*/
+			
 			class StealFlag: ExileAbstractAction
 			{
 				title = "Steal Flag";

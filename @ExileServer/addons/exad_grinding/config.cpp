@@ -1,6 +1,6 @@
 /*  
-	fn_getPlayersStr.sqf
-	
+	config.cpp
+
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,11 +14,33 @@
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 	See the License for the specific language governing permissions and
 	limitations under the License.
-
 */
-private["_img","_text"];
 
-_img = [ExAd_SB_ICON_PLAYERS] call ExAd_fnc_formatSBImage;
-_text = count allplayers;
+class CfgPatches {
+	class ExAd_Grinding {
+		requiredVersion = 0.1;
+		requiredAddons[] = {"ExAd_Core"};
+	};
+};
 
-[[_img, _text]] call ExAd_fnc_formatSBOutput
+class CfgFunctions {
+	class ExAdServer {
+		class Grinding {
+			file = "exad_grinding\Functions";
+			class grindProgress {};
+			class restoreLock {};
+		};
+	};
+};
+
+class CfgNetworkMessages
+{
+	class grindProgress
+	{
+		parameters[] = {"STRING"};
+	};
+	class restoreLock
+	{
+		parameters[] = {"STRING"};
+	};
+};

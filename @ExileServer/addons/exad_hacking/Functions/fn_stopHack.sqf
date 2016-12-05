@@ -1,5 +1,5 @@
 /*  
-	fn_getPlayersStr.sqf
+	fn_stopHack.sqf
 	
 	Copyright 2016 Jan Babor
 
@@ -14,11 +14,9 @@
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 	See the License for the specific language governing permissions and
 	limitations under the License.
-
 */
-private["_img","_text"];
+_object = objectFromNetId ([_this, 0, "",[""]] call BIS_fnc_param);
 
-_img = [ExAd_SB_ICON_PLAYERS] call ExAd_fnc_formatSBImage;
-_text = count allplayers;
+_object setVariable ["ExAd_HACK_INTERUPTED",true];
 
-[[_img, _text]] call ExAd_fnc_formatSBOutput
+true
