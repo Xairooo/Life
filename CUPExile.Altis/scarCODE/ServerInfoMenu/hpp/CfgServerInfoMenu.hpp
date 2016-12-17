@@ -37,9 +37,10 @@ class CfgServerInfoMenu
 			"<t size='1.25'>Rule #4</t><br />Do not remove the ability to steal a flagpole. Items blocking the pole will be deleted with no warning!<br />",
 			"<t size='1.25'>Rule #5</t><br />No racism, arguing over sidechat, talking in sidechat, or general harassment.<br />",
 			"<t size='1.25'>Rule #6</t><br />Do not take or get-in player vehicles at safezone's.<br />",
-			"<t size='1.25'>Rule #7</t><br />No attacking, harrassing or stealing in/or around safe zones. This is a bannable offense if witnessed by an admin or recorded on video.<br />",
-			"<t size='1.25'>Rule #8</t><br />Do not leave vehicles/helis or anything at safezone on saturdays it will be deleted we are doiong cleaning swipes saturdays<br />",
-			"<t size='1.25'>Rule #9</t><br />If you need comp/support go onto our ts3 and poke CPT.EliteWarfare he or a admin he tells will help you out!.<br />",
+            "<t size='1.25'>Rule #7</t><br />Do not leave vehicles or helis at safezone they will be unlocked on server restarts.<br />",
+			"<t size='1.25'>Rule #8</t><br />No attacking, harrassing or stealing in/or around safe zones. This is a bannable offense if witnessed by an admin or recorded on video.<br />",
+			"<t size='1.25'>Rule #9</t><br />Do not leave vehicles/helis or anything at safezone on saturdays and sundays it will be deleted we are doiong cleaning swipes saturdays and sundays<br />",
+			"<t size='1.25'>Rule #10</t><br />If you need comp/support go onto our ts3 and poke CPT.EliteWarfare he or a admin he tells will help you out!.<br />",
 			"<br />",
 			"<t size='1.5'>Ban's can be appealed at: http://exilezombies.com/</t>"
          };
@@ -78,7 +79,11 @@ class CfgServerInfoMenu
          menuName = "Donations";
          title = "DONATORS";
          content[] = {
-			"<t size='1.25'>Want to keep the server up and running? Please consider donating at http://exilezombies.com/</t>"
+			"<t size='1.25'>Want to keep the server up and running? Please consider donating at http://exilezombies.com/</t>",
+            "<t size='1.25'>Perks of Donation ( COMING SOON ):</t>",
+            "<t size='1.25'>- Kits($5 Donation)</t>",
+            "<t size='1.25'>- Player Cloacking($10 Donation)</t>",
+            "<t size='1.25'>- 1 Weapon Cargo Box, 1Million Pop-Tabs, 90k Respect, Insane Kit, 1 Rare-Amoured Admin Truck($20 Donation)</t>"
 		 };
 			 
 	};

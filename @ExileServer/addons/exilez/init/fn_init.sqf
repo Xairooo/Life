@@ -128,7 +128,7 @@ SafeZonePositions =
 UseHarassingZombies          = true;             //
 
 HSet = [
-/* 0 Groups Size  */         20,                  // maximum number of zombies around a player
+/* 0 Groups Size  */         25,                  // maximum number of zombies around a player
 /* 1 Frequency */            180,                // time in seconds between each new zombie.
 /* 2 Vest group */           Nothing,            // Vest function defined in ZVest.sqf
 /* 3 Loot group */           Nothing,            // Loot function defined in ZLoot.sqf
@@ -139,7 +139,7 @@ HSet = [
 UseHorde                     = true;             // Use the horde spawner             
 
 HordeSet = [
-/* 0 Groups Size  */         15,                 // maximum number of zombies around a player
+/* 0 Groups Size  */         25,                 // maximum number of zombies around a player
 /* 1 Min Frequency */        20,                 // min time in minutes between each new zombie horde.
 /* 2 Max Frequency */        60,                 // max time in minutes between each new zombie horde.
 /* 3 Vest group */           Basic,              // Vest function defined in ZVest.sqf
@@ -159,7 +159,7 @@ triggerLootbox = compile preprocessFile "exilez\init\zmissionloot.sqf";
 Trigger_1 = [				 //Cities
 /* 0  Use this trigger */    True,               // Self - explanatory
 /* 1  Trigger Positions */   Cities,             // The name of the array used to list all trigger position in the TriggerPositions.sqf file
-/* 2  Max Zombies */         8,                 // The maximum number of zombies for that trigger.
+/* 2  Max Zombies */         12,                 // The maximum number of zombies for that trigger.
 /* 3  Activation Delay */    15,                 // The delay before the activation of the trigger.
 /* 4  Spawn Delay */         15,                 // The delay between each zombie spawn right after the activation until the Max group size is reached.
 /* 5  Respawn Delay */       60,                 // The respawn delay after the max group size was reached
@@ -180,7 +180,7 @@ Trigger_1 = [				 //Cities
 Trigger_2 = [				 //Military
 /* 0  Use this trigger */    True,               
 /* 1  Trigger Positions */   Military,        
-/* 2  Max Zombies */         8,                 
+/* 2  Max Zombies */         16,                 
 /* 3  Activation Delay */    15,                 
 /* 4  Spawn Delay */         15,                 
 /* 5  Respawn Delay */       45,                 
@@ -201,7 +201,7 @@ Trigger_2 = [				 //Military
 Trigger_3 = [				 //No Buildings
 /* 0  Use this trigger */    True,               
 /* 1  Trigger Positions */   NoBuildings,        
-/* 2  Max Zombies */         8,                 
+/* 2  Max Zombies */         10,                 
 /* 3  Activation Delay */    15,                 
 /* 4  Spawn Delay */         15,                 
 /* 5  Respawn Delay */       60,                 
@@ -222,7 +222,7 @@ Trigger_3 = [				 //No Buildings
 Trigger_4 = [				 //No Man Land
 /* 0  Use this trigger */    True,               
 /* 1  Trigger Positions */   NoMansLand,       
-/* 2  Max Zombies */         8,                 
+/* 2  Max Zombies */         10,                 
 /* 3  Activation Delay */    15,                 
 /* 4  Spawn Delay */         15,                 
 /* 5  Respawn Delay */       30,                 
@@ -243,7 +243,7 @@ Trigger_4 = [				 //No Man Land
 Trigger_5 = [				 //Mission Trigger
 /* 0  Use this trigger */    True,               
 /* 1  Trigger Positions */   Mission,            
-/* 2  Max Zombies */         15,                 
+/* 2  Max Zombies */         40,                 
 /* 3  Activation Delay */    5,                  
 /* 4  Spawn Delay */         5,                  
 /* 5  Respawn Delay */       5,                  
