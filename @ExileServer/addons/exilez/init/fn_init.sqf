@@ -45,12 +45,12 @@ EnableHumanityChange		 = false;			 // Enable GR8's Humanity change
 ExileZombieKillRankChange	 = 5;				 // Both Rank and Humanity are dependant on this config
 
 EnableRespectOnKill          = true;             // Self Explanatory
-ZombieRespect                = 100;               // Respect per zombie kill
+ZombieRespect                = 20;               // Respect per zombie kill
 
-RoadKillBonus                = 10;               // Bonus Respect if roadkill
+RoadKillBonus                = 5;               // Bonus Respect if roadkill
 MinDistance                  = 50;               // Minimal distance for range bonus
 CqbDistance                  = 10;               // Minimal ditance for close quarter bonus
-CqbBonus                     = 40;               // Respect for close quarter bonus at 1 meter
+CqbBonus                     = 20;               // Respect for close quarter bonus at 1 meter
 DistanceBonusDivider         = 10;               // Distance divided by that number = respect E.G. 300m / [20] = 15 Respect
 
 //Zombie settings : SET TO -1 TO DISABLE AND USE DEFAULT FROM RYANZOMBIES
@@ -60,8 +60,8 @@ _Ryanzombiesattackspeed 	           = 1.5;	 // Attack speed, *(Time is seconds b
 _Ryanzombiesattackdistance 	           = 2;	     // Attack distance, *(in meters)
 _Ryanzombiesattackstrenth 	           = 0;	     // Attack strength *(Knockback strength) *(TYPO IS NORMAL)
 _Ryanzombiesdamage 			           = 0.05;   // Attack damage *(% of players life per hit, 1 is 100%)
-_Ryanzombiesdamagecar 		           = 0.05;	 // Attack damage to car *(% of car health per hit, 1 is 100%)
-_Ryanzombiesdamageair 		           = 0.01;	 // Attack damage to air *(% of car health per hit, 1 is 100%)
+_Ryanzombiesdamagecar 		           = 0.08;	 // Attack damage to car *(% of car health per hit, 1 is 100%)
+_Ryanzombiesdamageair 		           = 0.05;	 // Attack damage to air *(% of car health per hit, 1 is 100%)
 _Ryanzombiesdamagetank                 = 0.005;	 // Attack damage to tank *(% of car health per hit, 1 is 100%)
 _Ryanzombiesdamagecarstrenth           = 1.5;	 // Car attack strength *(Knockback strength in M/S)
 _Ryanzombiesdamageairstrenth           = 1;	     // Air attack strength *(Knockback strength M/S)

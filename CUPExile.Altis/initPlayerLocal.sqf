@@ -7,6 +7,9 @@
 
 if (!hasInterface || isServer) exitWith {};
 
+setTerrainGrid 3.125;
+setViewDistance 1500;
+
 //Wasserzeichen
 _pic = "logo.jpg";
 [
@@ -525,3 +528,5 @@ uiSleep 1;
 execVM "custom\announcepay.sqf";
 ExileClientPlayerIsDragging = false;
 missionNamespace setVariable ["XG_DragPlayer",(compileFinal preprocessFileLineNumbers "XG_DragPlayer.sqf")];
+[] execVM "Client_scriptsAndFunctions\initClient.sqf";
+_bul = [] execVM "addons\blowout\module\blowout_client.sqf";

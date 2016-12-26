@@ -25,6 +25,8 @@ class CfgRemoteExec
 		class AR_Hide_Object_Global 					{ allowedTargets=2; }; 
 		class AR_Enable_Rappelling_Animation 			{ allowedTargets=2; }; 
 		class AR_Rappel_From_Heli 						{ allowedTargets=2; }; 
+		class ExileClient_system_network_dispatchIncomingMessage 	 { allowedTargets=1; };
+		class CDAH_fnc_CDAH_Workshop_Gui 							 { allowedTargets=0; };
 	};
 	class Commands
 	{

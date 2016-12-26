@@ -4,9 +4,7 @@
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
- *
- * Modified by [FPS]kuplion - www.friendlyplayershooting.com
- *
+
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
@@ -14,6 +12,18 @@
 private["_victim","_killer","_countDeath","_countKill","_killSummary","_killingPlayer","_killType","_oldVictimRespect","_newVictimRespect","_oldKillerRespect","_newKillerRespect","_systemChat","_modifyVictimRespect","_respectLoss","_perks","_minRespectTransfer","_respectTransfer","_perkNames","_killerStatsNeedUpdate","_newKillerFrags","_victimStatsNeedUpdate","_newVictimDeaths","_victimPosition"];
 _victim = _this select 0;
 _killer = _this select 1;
+
+if (_killer isEqualTo _victim) then
+{
+	_lastDamageSource = _victim getVariable ["JohnO_lastSourceOfDamage",objNull];
+
+	_killer = _lastDamageSource;
+
+	_victime setVariable ["JohnO_lastSourceOfDamage",objNull,true];
+};
+
+format ["_killer = %1 :: _victim = %2",_killer,_victim] call ExileServer_util_log;
+
 if (!isServer || hasInterface || isNull _victim) exitWith {};
 _victim setVariable ["ExileDiedAt", time];
 if !(isPlayer _victim) exitWith {};

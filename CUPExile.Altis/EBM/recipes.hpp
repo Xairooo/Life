@@ -812,7 +812,7 @@ class SolarPanel2: Exile_AbstractCraftingRecipe
 	category = "Buildings";
 };
 
-class SolarPanel: Exile_AbstractCraftingRecipe
+class SolarPanel3: Exile_AbstractCraftingRecipe
 {
 	name = "Solar Panel";
 	pictureItem = "Land_SolarPanel_2_F_Kit";

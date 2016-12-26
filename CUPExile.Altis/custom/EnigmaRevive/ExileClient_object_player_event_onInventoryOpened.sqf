@@ -8,10 +8,16 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
-
+private["_cancelEvent","_container","_ignore"];
 _cancelEvent = false;
 _container = _this select 1;
-
+_ignore = _container getVariable ["ExileReborn_disableInventory",0];
+/*
+if (_ignore isEqualTo 1) then 
+{
+	closeDialog 602; 
+};
+*/
 try 
 {
 	if (ExileIsPlayingRussianRoulette) then 

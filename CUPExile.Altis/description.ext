@@ -60,7 +60,7 @@ showHUD[] =
     true,   // Tank direction indicator
     false,  // Commanding menu
     false,  // Group Bar
-    true,   // HUD Weapon Cursors
+    false,   // HUD Weapon Cursors
     false   // Squad Radar
 };
 
@@ -74,18 +74,43 @@ showHUD[] =
 #include "scarCODE\ServerInfoMenu\hpp\RscDisplayServerInfoMenu.hpp"
 #include "MarXet\dialog\RscMarXetDefines.hpp"
 #include "MarXet\dialog\RscMarXetDialog.hpp"
+#include "sounds.hpp"
 
 class CfgFunctions
 {
     #include "ExAdClient\CfgFunctions.cpp"
 	#include "TRXClient\CfgFunctions.cpp"
+    class Reborn
+    {
+        class Bootstrap
+        {
+            file="Client_scriptsAndFunctions";
+            class preInit
+            {
+                preInit = 1;
+            };
+        };
+    };
 };
 
+class RscTextNS
+{
+    idc = -1;
+    type = 0;
+    style = 2;
+    LineSpacing = 1.0;
+    h = 0.04;
+    ColorBackground[] = {1,1,1,0.2};
+    ColorText[] = {0.1,0.1,0.1,1};
+    font = "EtelkaMonospacePro";
+    SizeEx = 0.025;
 
+};
 class RscTitles
 {	
 	#include "ExAdClient\RscTitles.cpp"
 	#include "KillMessages.hpp"
+    #include "blowout_rsc.cpp"
 };
 
 class CfgHints
@@ -97,6 +122,7 @@ class CfgNetworkMessages
 {
 	#include "ExAdClient\CfgNetworkMessages.cpp"
 	#include "MarXet\CfgMarXetNetworkMessages.hpp"
+    #include "Client_scriptsAndFunctions\CfgNetworkMessages.hpp"
 	
 	class KillMessages
 	{

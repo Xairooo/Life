@@ -2305,7 +2305,7 @@ class CfgSettings
 		useStackedEH = 1;
 
 		// If you set this to 1 ...........................................
-		iReallyWantToGetHackedAndImRetarded = 0;
+		iReallyWantToGetHackedAndImRetarded = 1;
 	};
 
 	///////////////////////////////////////////////////////////////////////
@@ -2397,7 +2397,7 @@ class CfgSettings
 		*
 		* Default: Get 1 respect for every 10 pop tabs
 		*/
-		tradingRespectFactor = 0.1;
+		tradingRespectFactor = 0.2;
 
 		/**
 		* Defines the the minimum amount of Respect earned/lost for a kill
@@ -2420,8 +2420,8 @@ class CfgSettings
 
 		class Percentages
 		{
-			unlucky = 1; // Dying for an unknown reason costs you 1% respect
-			crash = 1; // Crashing your car costs you 1% respect
+			unlucky = 2; // Dying for an unknown reason costs you 1% respect
+			crash = 2; // Crashing your car costs you 1% respect
 			suicide = 2; // Comitting suicide costs you 2% of your respect
 			friendyFire = 3; // Friendly fire costs you 3%
 			npc = 4; // Being killed by an NPC costs you 4%
@@ -2496,7 +2496,10 @@ class CfgSettings
 			"TRYK_B_Medbag",
 			"ItemRadio",
 			"Exile_Headgear_SantaHat",
-			"Exile_Item_PlasticBottleFreshWater"
+			"Exile_Item_PlasticBottleFreshWater",
+			"Exile_Item_Bandage",
+			"Exile_Item_Heatpack",
+			"Chemlight_yellow"
 		};
 
 		/**
@@ -2548,8 +2551,8 @@ class CfgSettings
 		 */
 		spawnZoneVehicles[] =
 		{
-			{5, "Exile_Bike_OldBike"},
-			{5, "Exile_Bike_MountainBike"}
+			{1, "Exile_Bike_OldBike"},
+			{1, "Exile_Bike_MountainBike"}
 		};
 	};
 
@@ -2564,13 +2567,13 @@ class CfgSettings
 		* smaller the number more vehicles,
 		* you get the point
 		*/
-		vehiclesGridSize = 2000;
+		vehiclesGridSize = 2200;
 
 		/**
 		* Vehicle ammount per grid
 		* kinda self explanitory
 		*/
-		vehiclesGridAmount = 3;
+		vehiclesGridAmount = 0;
 
 		/**
 		* Creates global markers for vehicle spawn tweeking,
@@ -2669,7 +2672,7 @@ class CfgSettings
 		 * 0 = off
 		 * 1 = on
 		 */
-		unlockInSafeZonesAfterRestart = 0;
+		unlockInSafeZonesAfterRestart = 1;
 	};
 
 	class Weather
@@ -2685,8 +2688,8 @@ class CfgSettings
 			Add the keyframes here. The server will pick one random, so if you want one
 			weather type of be more dominant compared to others, add it multiple times
 		*/
-		//keyframes[] = {"Sunny", "Cloudy", "Thunderstorm"};
-		keyframes[] = {"Sunny"};
+		keyframes[] = {"Sunny", "Cloudy", "Thunderstorm", "Cloudy", "OvercastNoRain","monsoon"}; 
+		keyframesSummer[] = {"Sunny","OvercastNoRain","sunnyNoOvercast","Sunny","OvercastNoRain","sunnyNoOvercast","monsoon"}; 
 
 		/*
 			This is a keyframe. Look up the BIKI to get more details about the parameters
@@ -2719,31 +2722,71 @@ class CfgSettings
 
 		class Cloudy
 		{
-			fogValue = 0.2;
-			fogDecay = 0.1;
-			fogBase = 5;
-			overcast = 0.4;
+			fogValue = 0.3;
+			fogDecay = 0.2;
+			fogBase = 17;
+			overcast = 0.6;
 			waves = 0.4;
 			wind = 0.25;
 			gusts = 0.5;
-			rain = 0.1;
+			rain = 0;
 			lightnings = 0.1;
 			rainbows = 1;
 		};
 
 		class Thunderstorm
 		{
-			fogValue = 0.7;
+			fogValue = 0.6;
 			fogDecay = 0.2;
-			fogBase = 5;
+			fogBase = 20;
 			overcast = 1;
 			waves = 1;
 			wind = 0.25;
 			gusts = 0.5;
-			rain = 1;
+			rain = 0.5;
 			lightnings = 1;
 			rainbows = 0.5;
 		};
+		class OvercastNoRain
+		{
+			fogValue = 0;
+			fogDecay = 0;
+			fogBase = 0;
+			overcast = 0.8;
+			waves = 0.2;
+			wind = 0.25;
+			gusts = 0.1;
+			rain = 0;
+			lightnings = 0;
+			rainbows = 0;
+		};
+		class sunnyNoOvercast
+		{
+			fogValue = 0;
+			fogDecay = 0;
+			fogBase = 0;
+			overcast = 0;
+			waves = 0.2;
+			wind = 0.25;
+			gusts = 0.1;
+			rain = 0;
+			lightnings = 0;
+			rainbows = 0;
+		};
+		class monsoon
+		{
+			fogValue = 0.2;
+			fogDecay = 0.1;
+			fogBase = 5;
+			overcast = 1;
+			waves = 1;
+			wind = 1;
+			gusts = 1;
+			rain = 1;
+			lightnings = 1;
+			rainbows = 0;
+		};
+
 	};
 
 	class Time
@@ -2852,9 +2895,18 @@ class CfgSettings
 		/*
 			A list of events that are active
 		*/
-		enabledEvents[] = {"SupplyBox", "AbandonedSafe"};
+		enabledEvents[] = {"SupplyBox", "AbandonedSafe", "AmbientFlyOver", "EarthQuake"};
 
-		class SupplyBox
+		class EarthQuake 
+		{
+			type = "spawn";
+			function = "ExileServer_system_event_earthQuake_start";
+			minTime = 60;
+			maxTime = 240;
+			minimumPlayersOnline = 1;
+		};
+
+		class SupplyBox 
 		{
 			/*
 				Drops a supply box on a parachute next to a random airport on the map.
@@ -2865,7 +2917,7 @@ class CfgSettings
 			function = "ExileServer_system_event_supplyBox_start";
 			minTime = 60; // minutes
 			maxTime = 180; // minutes
-			minimumPlayersOnline = 10;
+			minimumPlayersOnline = 1;
 			dropRadius = 500; // 500m around an airport (including the main airport on Altis!)
 			dropAltitude = 100; // altitude of the drop
 			markerTime = 10; // minutes
@@ -2876,21 +2928,21 @@ class CfgSettings
 				The type of box is chosen randomly from the following list.
 				Add a type multiple times to increase the chance of being used.
 			*/
-			types[] = {"Beer", "Beer", "Tools", "Food", "Food", "RepairParts"};
+			types[] = {"Beer", "Beer", "Tools", "Food", "Food", "RepairParts","Weapons"};
 
 			class BoxTypes
 			{
-				class Beer
+				class Beer 
 				{
-					items[] =
+					items[] = 
 					{
 						{"Exile_Item_Beer", 24}
 					};
 				};
 
-				class Food
+				class Food 
 				{
-					items[] =
+					items[] = 
 					{
 						{"Exile_Item_BBQSandwich", 5},
 						{"Exile_Item_Catfood", 5},
@@ -2904,9 +2956,9 @@ class CfgSettings
 					};
 				};
 
-				class Tools
+				class Tools 
 				{
-					items[] =
+					items[] = 
 					{
 						{"Exile_Item_Wrench", 1},
 						{"Exile_Item_Shovel", 1},
@@ -2918,15 +2970,51 @@ class CfgSettings
 					};
 				};
 
-				class RepairParts
+				class RepairParts 
 				{
-					items[] =
+					items[] = 
 					{
 						{"Exile_Item_CarWheel", 8},
 						{"Exile_Item_FuelCanisterFull", 4},
 						{"Exile_Item_OilCanister", 1},
 						{"Exile_Item_Grinder", 1},
 						{"Exile_Item_CordlessScrewdriver", 1}
+					};
+				};
+				class Weapons
+				{
+					items[]=
+					{
+						{"LMG_Mk200_F",1},
+						{"arifle_MXM_Black_F",1},
+						{"arifle_MXM_F",1},
+						{"srifle_DMR_01_F",1},
+						{"srifle_EBR_F",1},
+						{"srifle_DMR_06_camo_F",1},
+						{"srifle_DMR_06_olive_F",1},
+						{"srifle_DMR_03_khaki_F",1},
+						{"srifle_DMR_03_multicam_F",1},
+						{"srifle_DMR_03_tan_F",1},
+						{"srifle_DMR_03_woodland_F",1},
+						{"MMG_01_hex_F",1},
+						{"MMG_01_tan_F",1},
+						{"MMG_02_camo_F",1},
+						{"MMG_02_black_F",1},
+						{"MMG_02_sand_F",1},
+						{"LMG_Zafir_F",1},
+						{"srifle_GM6_camo_F",1},
+						{"srifle_GM6_F",1},
+						{"srifle_LRR_camo_F",1},
+						{"srifle_LRR_F",1},
+						{"srifle_DMR_03_F",1},
+						{"srifle_DMR_04_F",1},
+						{"srifle_DMR_04_Tan_F",1},
+						{"srifle_DMR_02_camo_F",1},
+						{"srifle_DMR_02_F",1},
+						{"srifle_DMR_02_sniper_F",1},
+						{"srifle_DMR_05_blk_F",1},
+						{"srifle_DMR_05_hex_F",1},
+						{"srifle_DMR_05_tan_f",1}
 					};
 				};
 			};
@@ -2940,6 +3028,15 @@ class CfgSettings
 			maxTime = 120; // minutes
 			minimumPlayersOnline = 0;
 			markerTime = 15; // minutes
+		};
+
+		class AmbientFlyOver
+		{
+			type = "call";
+			function = "ExileServer_system_event_ambientFlyOver_start";
+			minTime = 30; // minutes
+			maxTime = 45; // minutes
+			minimumPlayersOnline = 1;
 		};
 	};
 

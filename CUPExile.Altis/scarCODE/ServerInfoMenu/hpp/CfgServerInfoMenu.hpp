@@ -81,9 +81,9 @@ class CfgServerInfoMenu
          content[] = {
 			"<t size='1.25'>Want to keep the server up and running? Please consider donating at http://exilezombies.com/</t>",
             "<t size='1.25'>Perks of Donation ( COMING SOON ):</t>",
-            "<t size='1.25'>- Kits($5 Donation)</t>",
-            "<t size='1.25'>- Player Cloacking($10 Donation)</t>",
-            "<t size='1.25'>- 1 Weapon Cargo Box, 1Million Pop-Tabs, 90k Respect, Insane Kit, 1 Rare-Amoured Admin Truck($20 Donation)</t>"
+            "<t size='1.25'>- ($5 Donation)Kits</t>",
+            "<t size='1.25'>- ($10 Donation)Player Cloacking</t>",
+            "<t size='1.25'>- ($20 Donation)1 Weapon Cargo Box, 1Million Pop-Tabs, 90k Respect, Insane Kit, 1 Rare-Amoured Admin Truck</t>"
 		 };
 			 
 	};
@@ -121,7 +121,7 @@ class CfgServerInfoMenu
          menuName = "Communication";
          title = "VOICE SERVER AND WEBSITE";
          content[] = {
-            "<t size='1.25'>Teamspeak 3:  </t>74.123.104.102",
+            "<t size='1.25'>Teamspeak 3:  </t>52.5.211.95:9103",
             "<br />",
             "<t size='1.25'>Website:  </t>http://exilezombies.com/"
          };

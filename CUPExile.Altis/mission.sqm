@@ -1377,7 +1377,7 @@ class Mission
 		{
 			position[]={10210.259,0.012424059,5300.854};
 			name="ts3";
-			text="TeamSpeak 3 IP: 74.123.104.102";
+			text="TeamSpeak 3 IP: 52.5.211.95:9103";
 			type="waypoint";
 			colorName="ColorBlack";
 		};

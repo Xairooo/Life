@@ -8,7 +8,7 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
- 
+#include "CDAH_crafting\logic\CDAH_CfgExileDelayedActions.hpp"
 #include "MarXet\CfgMarXet.cpp"
 
 class CfgClans
@@ -59,7 +59,7 @@ class CfgClans
 
 class CfgXM8
 {
-	extraApps[] = { "BRAmaRecipes", "ExAd_VG", "ExAd_Info", "ExAd_CHVD", "ExAd_Journal", "ExAd_Bike", "ExAd_Quad", "ExAd_SB", "ExAd_JX", "ExAd_APOC_Airdrop"};
+	extraApps[] = { "BRAmaRecipes", "ExAd_VG", "ExAd_Info", "ExAd_CHVD", "ExAd_Journal", "ExAd_Bike", "ExAd_SB", "ExAd_JX", "ExAd_APOC_Airdrop","ExAd_AttachChem","scanTower","treatWounds"};
 
 		class ExAd_APOC_Airdrop
 	{
@@ -130,15 +130,6 @@ class CfgXM8
 		autoCleanUp = 1;
 		quickFunction = "['ExAd_Bike'] call ExAd_XM8_DV_fnc_spawnVehicle";
 	};
-	class ExAd_Quad
-	{
-		title = "Deploy Quad";
-		bambiState = 0;
-		vehicleClass = "Exile_Bike_QuadBike_Fia";
-		recipe[] = { { "Exile_Item_ExtensionCord", 1 } };
-		packable = 1;
-		quickFunction = "['ExAd_Quad'] call ExAd_XM8_DV_fnc_spawnVehicle";
-	};
 	class ExAd_SB
 	{
 		title = "Statsbar Settings";
@@ -146,7 +137,7 @@ class CfgXM8
 		logo = "ExadClient\XM8\Apps\SB_Settings\Icon_SB.paa";
 		onLoad = "ExAdClient\XM8\Apps\SB_Settings\onLoad.sqf";
 	};
-		class ExAd_JX
+	class ExAd_JX
 	{
 		title = "Unit Scanner";
 		controlID = 85100;					//IDC:85100 -> 85200
@@ -155,6 +146,27 @@ class CfgXM8
 		onOpen = "ExAdClient\XM8\Apps\JX\onOpen.sqf";
 		onClose = "ExAdClient\XM8\Apps\JX\onClose.sqf";
 	};
+	class ExAd_AttachChem
+    {
+        title = "Attach chemlight";
+        controlID = 50500;                  //IDC:50400 -> 50475 || These need to be unique and out of range from each other
+        logo = "ExAdClient\XM8\Apps\Chem\Icon_chem.paa";
+        quickFunction = "ExileClientXM8CurrentSlide = 'apps';closeDialog 0;[] execVM 'ExAdClient\XM8\Apps\Chem\onOpen.sqf'";
+    };
+    class scanTower
+    {
+        title = "Scan communications";
+        controlID = 50600;                  //IDC:50400 -> 50475 || These need to be unique and out of range from each other
+        logo = "ExAdClient\XM8\Apps\scanTower\radarLogo.paa";
+        quickFunction = "ExileClientXM8CurrentSlide = 'apps';closeDialog 0;[position player,30] execVM 'ExAdClient\XM8\Apps\scanTower\JohnO_script_hackCommsTower.sqf'";
+    };
+   	class treatWounds
+    {
+        title = "Treat wounds";
+        controlID = 50700;                  //IDC:50400 -> 50475 || These need to be unique and out of range from each other
+        logo = "ExAdClient\XM8\Apps\wounds\cross.paa";
+        quickFunction = "ExileClientXM8CurrentSlide = 'apps';closeDialog 0;[] execVM 'ExAdClient\XM8\Apps\wounds\JohnO_script_treatWounds.sqf'";
+    };
 
 };
 
@@ -175,8 +187,11 @@ class CfgCraftingRecipes
 {
 	#include "addons\crafting\CustomCrafting.hpp"
 	#include "addons\crafting\ExileCrafting.hpp"
+	#include "CDAH_crafting\vehicleRecipes\CDAH_Vehicle_recipies_config.hpp"
+	#include "CDAH_crafting\deviceRecipes\CDAH_Device_recipies.hpp"
 	#include "EBM\recipes.hpp" 
 };
+
 class CfgExileArsenal
 {
 	#include "EBM\prices.hpp"
@@ -185,19 +200,7 @@ class CfgExileArsenal
 	#include "TRADERS\ARMA3W\ItemListARMA3W.hpp"
 	#include "TRADERS\CUPW\ItemListCUPW.hpp"
 	#include "TRADERS\CUPV\ItemListCUPV.hpp"
-	//#include "TRADERS\EBM\prices.hpp"
-	//#include "TRADERS\HAP\ItemListHAP.hpp"
-	//#include "TRADERS\HLC\ItemListHLC.hpp"
-	//#include "TRADERS\HVP\ItemListHVP.hpp"
-	//#include "TRADERS\HWP\ItemListHWP.hpp"
-	//#include "TRADERS\Jonzie\ItemListJonzie.hpp"
-	//#include "TRADERS\MASV\ItemListMASV.hpp"
-	//#include "TRADERS\MASW\ItemListMASW.hpp"
-	//#include "TRADERS\NIA\ItemListNIA.hpp"
-	//#include "TRADERS\R3FW\ItemListR3FW.hpp"
-	//#include "TRADERS\RHSGREF\ItemListGREF.hpp"
-	//#include "TRADERS\RHSV\ItemListRHSV.hpp"
-	//#include "TRADERS\RHSW\ItemListRHSW.hpp"
+	#include "TRADERS\Jonzie\ItemListJonzie.hpp"
 	#include "TRADERS\TRYK\ItemListTRYK.hpp"
 	#include "TRADERS\PODS\ItemListPODS.hpp"
 	#include "TRADERS\CUSTOM\ItemListCUSTOM.hpp"
@@ -214,13 +217,13 @@ class CfgExileEnvironment
 		class FireFlies
 		{
 			// 1 = enabled, 0 = disabled
-			enable = 0;
+			enable = 1;
 
 			// At this hour fire flies begin to spawn
-			startHour = 18;
+			startHour = 16;
 
 			// At this hour fire flies stop spawning
-			endHour = 4;
+			endHour = 6;
 		};
 
 		class Anomalies
@@ -238,13 +241,13 @@ class CfgExileEnvironment
 		class Breathing
 		{
 			// 1 = enabled, 0 = disabled
-			enable = 0;
+			enable = 1;
 		};
 
 		class Snow
 		{
 			// 1 = enabled, 0 = disabled
-			enable = 0;
+			enable = 1;
 
 			// https://community.bistudio.com/wiki/surfaceType
 			surfaces[] = {};
@@ -260,13 +263,39 @@ class CfgExileEnvironment
 		{
 			// Temperature in °C for the time of day, per hour
 			// Add the first index to the last index, so it is 25 indizes!
-			daytimeTemperature[] = {15.93,16.89,18.42,20.40,22.68,25.10,27.48,29.63,31.40,32.66,33.32,33.80,33.80,33.32,32.66,31.40,29.63,27.48,25.10,22.68,20.40,18.42,16.89,15.93,15.93};
+			daytimeTemperature[] = {
+				-6.93, 	//0
+				-5.89,	//1
+				-4.42,	//2
+				-3.40, 	//3
+				-2.68,	//4
+				-1.10,	//5
+				1.48,	//6
+				2.63,	//7
+				3.40,	//8
+				4.66,	//9
+				5.32,	//10
+				6.80,	//11
+				6.80,	//12
+				5.32,	//13
+				4.66,	//14
+				3.40, 	//15
+				2.63,	//16
+				1.48,	//17
+				-1.10,	//18
+				-2.68,	//19
+				-3.40,	//20
+				-4.42,	//21
+				-5.89,	//22
+				-6.93, 	//23
+				-7.93 	//24
+			};
 		
 			// Temperature change in °C when it is 100% overcast
 			overcast = -2;
 
 			// Temperature change in °C when it is 100% raining
-			rain = -5;
+			rain = -3;
 
 			// Temperature change in °C when it is 100% windy
 			wind = -1;
@@ -424,13 +453,13 @@ class CfgExileLootSettings
 	 * the garbage collector settings of your server
 	 * CfgSettings!
 	 */
-	lifeTime = 10;
+	lifeTime = 8;
 
 	/**
 	 * Interval in seconds when the client searches for
 	 * new buildings to spawn loot in
 	 */
-	spawnInterval = 30;
+	spawnInterval = 20;
 
 	/**
 	 * This is a percentage value to determine how many loot
@@ -444,7 +473,7 @@ class CfgExileLootSettings
 	 *
 	 * You can also cap it at a maximum value. See below.
 	 */
-	maximumPositionCoverage = 23;
+	maximumPositionCoverage = 30;
 
  	/**
  	 * Limit the number of loot positions per building. If the 
@@ -454,14 +483,14 @@ class CfgExileLootSettings
  	 * This results in 30 loot positions and that is too much. So we
  	 * cap this at 10
  	 */
-	maximumNumberOfLootSpotsPerBuilding = 13;
+	maximumNumberOfLootSpotsPerBuilding = 5;
 
 	/**
 	 * Exile spawns a random number of items per loot spot. This 
 	 * is the upper cap for that. So 3 means it could spawn 1, 2 
 	 * or 3.
 	 */
-	maximumNumberOfItemsPerLootSpot = 4;
+	maximumNumberOfItemsPerLootSpot = 3;
 
 	/**
 	 * Radius in meter to spawn loot AROUND each player.
@@ -479,7 +508,7 @@ class CfgExileLootSettings
 	 * not spawn loot. Set this to 0 if you want to have loot spawning
 	 * in trader citites, ugh.
 	 */
-	minimumDistanceToTraderZones = 300;
+	minimumDistanceToTraderZones = 500;
 
 	/**
 	 * Defines the radius around territories where no loot spawns.
@@ -540,6 +569,7 @@ class ExileAbstractAction
  */
 class CfgInteractionMenus
 {
+	#include "CDAH_crafting\logic\CDAH_Class_tank.hpp"
 	#include "EBM\menus.hpp"
 	class Car 
 	{
@@ -548,6 +578,13 @@ class CfgInteractionMenus
 
 		class Actions 
 		{
+			class Rearm: ExileAbstractAction
+			{
+				title = "Rearm";
+				condition = "!(magazinesAllTurrets _this isEqualto [])"; //condition = "!(_this magazinesAllTurrets isEqualto [])";
+				action = "['RearmVehicle', _this select 0] call ExileClient_action_execute";
+			};
+
 			class ScanLock: ExileAbstractAction
 			{
 				title = "Scan Lock";
@@ -572,13 +609,45 @@ class CfgInteractionMenus
 			};
 
 			// Repairs a vehicle to 100%. Requires Duckttape
+			/*
 			class Repair: ExileAbstractAction
 			{
 				title = "Repair";
 				condition = "true";
 				action = "['RepairVehicle', _this select 0] call ExileClient_action_execute";
 			};
-
+			*/
+			// Advanced repair
+			class RepairInfoLand: ExileAbstractAction
+			{
+				title = "REPAIR INFO";
+				condition = "true";
+				action = "_this call JohnO_fnc_displayVehicleRepairInfo";
+			};
+			class ReplaceWheels: ExileAbstractAction
+			{
+				title = "Replace wheel";
+				condition = "true";
+				action = "_this call JohnO_fnc_repairWheels";
+			};
+			class RepairWheels: ExileAbstractAction
+			{
+				title = "Repair wheel";
+				condition = "true";
+				action = "_this call JohnO_fnc_repairSingleWheel";
+			};
+			class ScavengeWheels: ExileAbstractAction
+			{
+				title = "Scavenge wheel";
+				condition = "true";
+				action = "_this call JohnO_fnc_scavengeWheel";
+			};
+			class RepairBody: ExileAbstractAction
+			{
+				title = "Repair body";
+				condition = "true";
+				action = "_this call JohnO_fnc_vehicleRepairCar";
+			};
 			// Hot-wires a vehicle
 			class Hotwire: ExileAbstractAction
 			{
@@ -635,6 +704,13 @@ class CfgInteractionMenus
 
 		class Actions
 		{
+			class Rearm: ExileAbstractAction
+			{
+				title = "Rearm";
+				condition = "!(magazinesAllTurrets _this isEqualto [])"; //condition = "!(_this magazinesAllTurrets isEqualto [])";
+				action = "['RearmVehicle', _this select 0] call ExileClient_action_execute";
+			};	
+			
 			class ScanLock: ExileAbstractAction
 			{
 				title = "Scan Lock";
@@ -667,13 +743,33 @@ class CfgInteractionMenus
 			};
 
 			// Repairs a vehicle to 100%. Requires Duckttape
+			/*
 			class Repair: ExileAbstractAction
 			{
 				title = "Repair";
 				condition = "true";
 				action = "['RepairVehicle', _this select 0] call ExileClient_action_execute";
 			};
-
+			*/
+			// Advanced repair
+			class RepairInfoChopper: ExileAbstractAction
+			{
+				title = "REPAIR INFO";
+				condition = "true";
+				action = "_this call JohnO_fnc_displayVehicleRepairInfo";
+			};
+			class RepairMinor: ExileAbstractAction
+			{
+				title = "Minor repair";
+				condition = "true";
+				action = "_this call JohnO_fnc_repairchopperhalf";
+			};
+			class RepairFull: ExileAbstractAction
+			{
+				title = "Full repair";
+				condition = "true";
+				action = "_this call JohnO_fnc_repairchopper";
+			};
 			// Flips a vehicle so the player doesnt have to call an admin
 			// Check if vector up is fucked
 			class Flip: ExileAbstractAction
@@ -900,7 +996,28 @@ class CfgInteractionMenus
 
 		};
 	};
-
+	class Resting
+	{
+		targetType = 2;
+		target = "Exile_Construction_CampFire_Static";
+		class Actions
+		{
+			// Sleeping mat
+	        class rest : ExileAbstractAction
+	        {
+	            title = "Rest by fire";
+	            condition = "true";
+	            action = "[] spawn JohnO_fnc_restAtFire";
+	        };
+	        // Light crude fre
+	         class attemptLight : ExileAbstractAction
+	        {
+	            title = "Attempt to light";
+	            condition = "!(inflamed _this)";
+	            action = "_this spawn JohnO_fnc_crudeLightFire";
+	        };
+	    };    
+    };  
 	/*
 		Tent, Storage crate etc.
 	*/
@@ -971,6 +1088,12 @@ class CfgInteractionMenus
 
 		class Actions
 		{
+			class Rearm: ExileAbstractAction
+			{
+				title = "Rearm";
+				condition = "!(magazinesAllTurrets _this isEqualto [])"; //condition = "!(_this magazinesAllTurrets isEqualto [])";
+				action = "['RearmVehicle', _this select 0] call ExileClient_action_execute";
+			};	
 			// Locks a vehicle
 			class Lock: ExileAbstractAction
 			{
@@ -1086,7 +1209,24 @@ class CfgInteractionMenus
 				condition = "!(alive ExileClientInteractionObject)";
 				action = "_this call ExileClient_object_player_identifyBody";
 			};
-
+			class Pressure: ExileAbstractAction
+			{
+				title = "Apply Pressure";
+				condition = "((alive ExileClientInteractionObject) && (isBleeding ExileClientInteractionObject) && (ExileClientInteractionObject distance player < 3))";
+				action = "_this call JohnO_fnc_applyPressureToWound";
+			};
+			class Bandage: ExileAbstractAction
+			{
+				title = "Apply Bandage";
+				condition = "((alive ExileClientInteractionObject) && (isBleeding ExileClientInteractionObject) && ('Exile_Item_Bandage' in (magazines player)) && (ExileClientInteractionObject distance player < 3))";
+				action = "_this call JohnO_fnc_applyBandageToPlayer";
+			};
+			class InstaDoc: ExileAbstractAction
+			{
+				title = "Apply InstaDoc";
+				condition = "((alive ExileClientInteractionObject) && ('Exile_Item_InstaDoc' in (magazines player)) && (ExileClientInteractionObject distance player < 3))";
+				action = "_this call JohnO_fnc_applyInstaDocToPlayer";
+			};
 			//////////////Added by [_ZEN_]happydayz/////////////////
 
 			class Revive : ExileAbstractAction
@@ -1104,6 +1244,40 @@ class CfgInteractionMenus
 			};
 		};
 	};
+
+	class Man 
+	{
+		targetType = 2;
+		target = "Man";
+
+		class Actions 
+		{
+			class StudyCorpse: ExileAbstractAction
+			{
+				title = "Study and hide corpse";
+				condition = "(!(alive ExileClientInteractionObject) && ((ExileClientInteractionObject getVariable ['ExileReborn_disableInventory',-1]) isEqualTo -1) && (player distance ExileClientInteractionObject < 2))";
+				action = "_this call JohnO_fnc_studyCorpse";
+			};
+			class Bribe: ExileAbstractAction
+			{
+				title = "Bribe survivor";
+				condition = "((alive ExileClientInteractionObject) && ((ExileClientInteractionObject getVariable ['ExileReborn_survivor',false]) isEqualTo true) && (player distance ExileClientInteractionObject < 2))";
+				action = "_this call JohnO_fnc_bribeSurvivor";
+			};	
+			class Follow: ExileAbstractAction
+			{
+				title = "Come with me?";
+				condition = "((alive ExileClientInteractionObject) && ((ExileClientInteractionObject getVariable ['ExileReborn_survivor_isFollowing',-1]) isEqualTo -1) && ((ExileClientInteractionObject getVariable ['ExileReborn_survivor',false]) isEqualTo true) && (player distance ExileClientInteractionObject < 2))";
+				action = "_this call JohnO_fnc_survivorFollowMe";
+			};	
+			class Leave: ExileAbstractAction
+			{
+				title = "Leave me alone!";
+				condition = "((alive ExileClientInteractionObject) && !((ExileClientInteractionObject getVariable ['ExileReborn_survivor_isFollowing',-1]) isEqualTo -1) && ((ExileClientInteractionObject getVariable ['ExileReborn_survivor',false]) isEqualTo true) && ((player getVariable ['ExileReborn_survivor_isFollowingMe',false]) isEqualTo true) && (player distance ExileClientInteractionObject < 2))";
+				action = "_this call JohnO_fnc_survivorLeave";
+			};		
+		};
+	};
 };
 /**
  * Classname is used for reference
@@ -1112,6 +1286,8 @@ class CfgInteractionMenus
  */
 class CfgInteractionModels
 {
+	// CDAH CRAFTING InteractionModles
+	#include "CDAH_crafting\logic\CDAH_interactionModels.hpp"
 	class WaterSource
 	{
 		name = "Water tanks, barrels, coolers or pumps";
@@ -1279,24 +1455,24 @@ class CfgLocker
 class CfgPlayer 
 {
 	// In minutes ammount of time it takes to go from 100 - 0 if stationary
-	hungerDecay = 90;
-	thirstDecay = 60;
+	hungerDecay = 120;
+	thirstDecay = 110;
 
 	// Damage taken from 0 (health||thirst)/sec
-	healthDecay = 5.0;
+	healthDecay = 0.5;
 
 	// Health regen if over BOTH
-	thirstRegen = 75;
-	hungerRegen = 75;
+	thirstRegen = 70;
+	hungerRegen = 70;
 
 	// IF above meet recover HP%/MIN
-	recoveryPerMinute = 5;
+	recoveryPerMinute = 2;
 
 	// Set custom aim precision coefficient for weapon sway
 	// https://community.bistudio.com/wiki/Arma_3_Stamina
 	// Set to -1 if you want to use Arma 3 default value
 	// setCustomAimCoef
-	customAimCoefficient = 0.5;
+	customAimCoefficient = 0.3;
 
 	// 0 or 1
 	enableFatigue = 0;
@@ -1325,31 +1501,31 @@ class CfgSlothMachine
 		class Level1
 		{
 			symbol = "\exile_assets\texture\item\Exile_Item_ToiletPaper.paa";
-			prize = 101;
+			prize = 150;
 		};
 
 		class Level2
 		{
 			symbol = "\exile_assets\texture\item\Exile_Item_CockONut.paa";
-			prize = 110;
+			prize = 200;
 		};
 
 		class Level3
 		{
 			symbol = "\exile_assets\texture\item\Exile_Item_Beer.paa";
-			prize = 125;
+			prize = 300;
 		};
 
 		class Level4
 		{
 			symbol = "\exile_assets\texture\item\Exile_Item_Knife.paa";
-			prize = 150;
+			prize = 450;
 		};
 
 		class Level5
 		{
 			symbol = "\exile_assets\texture\item\Exile_Item_Safe.paa";
-			prize = 200;
+			prize = 500;
 		};
 		
 		class Jackpot
@@ -1414,7 +1590,7 @@ class CfgTraderCategories
 	//#include "TRADERS\HLC\TraderCategoriesHLC.hpp"
 	//#include "TRADERS\HVP\TraderCategoriesHVP.hpp"
 	//#include "TRADERS\HWP\TraderCategoriesHWP.hpp"
-	//#include "TRADERS\Jonzie\TraderCategoriesJonzie.hpp"
+	#include "TRADERS\Jonzie\TraderCategoriesJonzie.hpp"
 	//#include "TRADERS\MASV\TraderCategoriesMASV.hpp"
 	//#include "TRADERS\MASW\TraderCategoriesMASW.hpp"
 	//#include "TRADERS\NIA\TraderCategoriesNIA.hpp"
@@ -1440,18 +1616,18 @@ class CfgTrading
 	* items and vehicles. It is used if there is no sales price defined
 	* in CfgExileArsenal. 
 	*/
-	sellPriceFactor = 0.5;
+	sellPriceFactor = 0.1;
 	
-	rekeyPriceFactor = 0.1;
+	rekeyPriceFactor = 0.5;
 
 	class requiredRespect 
 	{
 		Level1 = 0;
 		Level2 = 5000;
 		Level3 = 10000;
-		Level4 = 15000;
-		Level5 = 20000;
-		Level6 = 25000;
+		Level4 = 25000;
+		Level5 = 40000;
+		Level6 = 55000;
 	};
 };
 class CfgVehicleCustoms

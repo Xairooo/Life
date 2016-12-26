@@ -1,12 +1,9 @@
 	class JonzieCars
 	{
-		name = "Jonzie Cars";
+		name = "JonzieCars";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-		///////////////////////////////////////////////////////////////////////////////
-		// CARS
-		///////////////////////////////////////////////////////////////////////////////
 		"Jonzie_30CSL",					//BMW3.0 CSL
         "Jonzie_Escalade",              //Cadillac Escalade
         "Jonzie_Curtain_Roadtrain",		//Curtain B Trailer
@@ -37,6 +34,5 @@
         "Jonzie_Corolla",				//Toyota Sprinter
         "Jonzie_Western",				//Western Star 4900
         "Jonzie_Pallet_Empty"			//Pallet Empty
-
 		};
 	};
