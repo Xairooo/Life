@@ -6,11 +6,6 @@ if (isDedicated || isServer) then {
 		_parameters2  =(_parameters select 1);
 		diag_log format ["createVehicleRequested %1 ", _parameters]; 
 		veh = createVehicle["Exile_Bike_QuadBike_Blue", _parameters2 , [] ,0 , "NONE"];
-        private _dummyTrigger = createTrigger ["EmptyDetector", [0,0,0], true];
-        _dummyTrigger setTriggerStatements ["
-        [""commy_fixOPC"", ""onEachFrame"", {}] call BIS_fnc_addStackedEventHandler;
-        false
-    ", "", ""];
 	};
 };
 

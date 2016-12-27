@@ -2,7 +2,7 @@
 /// ALTIS ///////////
 /////////////////////
 
-ExileRebornVersion = "0.8.2";
+ExileRebornVersion = "0.8.3";
 publicVariable "ExileRebornVersion";
 
 Event_DEBUG_Location = [0,0,0];
@@ -78,14 +78,6 @@ switch (toLower worldName) do
 		];
 	};
 };
-
-/** Zombie stuff **/
-
-Event_IdleZombieArray = [];
-Event_lastMoan = time;
-Event_moanCD = 15;
-Event_zombieHoard_lastActivated = time;
-Event_zombieHoard_coolDown = 1800;
 
 /** Animal Stuff **/
 
@@ -336,8 +328,6 @@ uiSleep 20;
 
 [Event_lightningSpawnInterval, JohnO_fnc_spawnStormEvent, [], true] call ExileServer_system_thread_addtask;
 
-[2, JohnO_fnc_zombieIdleBehaviour, [], true] call ExileServer_system_thread_addtask;
-[30, JohnO_fnc_spawnZombieHoardEvent, [], true] call ExileServer_system_thread_addtask;
 
 [15, JohnO_fnc_simulationManager, [], true] call ExileServer_system_thread_addtask;
 	

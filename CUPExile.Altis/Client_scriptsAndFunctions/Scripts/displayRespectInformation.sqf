@@ -61,7 +61,7 @@ if (isNil "_introText") then
 
 if !(_introText) then
 {
-	_introTextToDisplay1 = format ["Exiled, abandoned..%1 welcome to your EXILE.",name player];
+	_introTextToDisplay1 = format ["Exiled, abandoned..%1 welcome to your EXILEZOMBIES.",name player];
 	_introTextToDisplay2 = format ["These messages will only appear once, so please take the time to read. You are playing in a persistant world. The date, time and weather will persist through server restarts, the current season is winter"];
 	_introTextToDisplay3 = format ["Your character will obtain soft skills by earning respect, press number 7 at any time to see your soft skills -- Shortly an info page will open for you to view - Press escape to close it"];
 
@@ -93,7 +93,7 @@ if !(_introText) then
 	saveProfileNamespace;
 };	
 
-systemChat format ["Client loaded - EXILE REBORN -- v %1",ExileRebornVersion];
+systemChat format ["Client loaded - EXILEZOMBIES -- v %1",ExileRebornVersion];
 
 uiSleep 30;
 

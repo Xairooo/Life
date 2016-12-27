@@ -45,7 +45,7 @@ class Mission
 				items=100;
 				class Item0
 				{
-					position[]={13237.118,20.648096,11705.381};
+					position[]={13237.161,20.660374,11705.338};
 					special="NONE";
 					id=0;
 					side="GUER";
@@ -746,7 +746,7 @@ class Mission
 				};
 				class Item70
 				{
-					position[]={13238.397,17.551817,11689.725};
+					position[]={13238.44,17.573044,11689.811};
 					special="NONE";
 					id=70;
 					side="GUER";
@@ -776,7 +776,7 @@ class Mission
 				};
 				class Item73
 				{
-					position[]={13232.301,16.92498,11689.896};
+					position[]={13232.043,16.925327,11689.982};
 					special="NONE";
 					id=73;
 					side="GUER";
@@ -1049,7 +1049,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=57;
+		items=36;
 		class Item0
 		{
 			position[]={3874.3633,18.125629,13280.79};
@@ -1204,6 +1204,25 @@ class Mission
 		};
 		class Item16
 		{
+			position[]={2998.0603,3.7756021,18175.479};
+			name="TraderZoneFolia";
+			text="Trader";
+			markerType="ELLIPSE";
+			type="ExileTraderZone";
+			colorName="ColorBlack";
+			fillName="Border";
+			a=175;
+			b=175;
+			drawBorder=1;
+		};
+		class Item17
+		{
+			position[]={2998.0603,3.7756021,18175.479};
+			name="TraderZoneFoliaIcon";
+			type="ExileTraderZoneIcon";
+		};
+		class Item18
+		{
 			position[]={14354,0,18960.1};
 			name="ConcreteMixerZoneAthira";
 			text="Concrete Mixer";
@@ -1215,13 +1234,13 @@ class Mission
 			b=750;
 			drawBorder=1;
 		};
-		class Item17
+		class Item19
 		{
 			position[]={14354,0,18960.1};
 			name="ConcreteMixerZoneAthiraIcon";
 			type="ExileConcreteMixerZoneIcon";
 		};
-		class Item18
+		class Item20
 		{
 			position[]={18309.4,0,15575};
 			name="ConcreteMixerZoneCharkia";
@@ -1234,13 +1253,13 @@ class Mission
 			b=750;
 			drawBorder=1;
 		};
-		class Item19
+		class Item21
 		{
 			position[]={18309.4,0,15575};
 			name="ConcreteMixerZoneCharkiaIcon";
 			type="ExileConcreteMixerZoneIcon";
 		};
-		class Item20
+		class Item22
 		{
 			position[]={11391.2,0,14259.5};
 			name="ConcreteMixerZoneAlikampos";
@@ -1253,13 +1272,13 @@ class Mission
 			b=750;
 			drawBorder=1;
 		};
-		class Item21
+		class Item23
 		{
 			position[]={11391.2,0,14259.5};
 			name="ConcreteMixerZoneAlikamposIcon";
 			type="ExileConcreteMixerZoneIcon";
 		};
-		class Item22
+		class Item24
 		{
 			position[]={21845.1,0,20977.6};
 			name="ContaminatedZoneGhostHotel";
@@ -1272,13 +1291,13 @@ class Mission
 			b=400;
 			drawBorder=1;
 		};
-		class Item23
+		class Item25
 		{
 			position[]={21845.1,0,20977.6};
 			name="ContaminatedZoneGhostHotelIcon";
 			type="ExileContaminatedZoneIcon";
 		};
-		class Item24
+		class Item26
 		{
 			position[]={16756.473,13.727601,10001.484};
 			name="ContaminatedZoneGhostHotel_1";
@@ -1291,13 +1310,13 @@ class Mission
 			b=400;
 			drawBorder=1;
 		};
-		class Item25
+		class Item27
 		{
 			position[]={16754.174,13.706452,10014.138};
 			name="ContaminatedZoneGhostHotelIcon_1";
 			type="ExileContaminatedZoneIcon";
 		};
-		class Item26
+		class Item28
 		{
 			position[]={13929.734,44.551182,20358.398};
 			name="ContaminatedZoneGhostHotel_1_1";
@@ -1310,13 +1329,13 @@ class Mission
 			b=400;
 			drawBorder=1;
 		};
-		class Item27
+		class Item29
 		{
 			position[]={13927.436,44.903397,20371.051};
 			name="ContaminatedZoneGhostHotelIcon_1_1";
 			type="ExileContaminatedZoneIcon";
 		};
-		class Item28
+		class Item30
 		{
 			position[]={6470.7051,179.32356,12288.259};
 			name="ContaminatedZoneGhostHotel_1_2";
@@ -1329,13 +1348,13 @@ class Mission
 			b=400;
 			drawBorder=1;
 		};
-		class Item29
+		class Item31
 		{
 			position[]={6468.4063,184.00215,12300.911};
 			name="ContaminatedZoneGhostHotelIcon_1_2";
 			type="ExileContaminatedZoneIcon";
 		};
-		class Item30
+		class Item32
 		{
 			position[]={21023.229,1.3911499,14748.246};
 			name="ContaminatedZoneGhostHotel_1_3";
@@ -1348,13 +1367,13 @@ class Mission
 			b=400;
 			drawBorder=1;
 		};
-		class Item31
+		class Item33
 		{
 			position[]={21020.93,0.53557616,14760.898};
 			name="ContaminatedZoneGhostHotelIcon_1_3";
 			type="ExileContaminatedZoneIcon";
 		};
-		class Item32
+		class Item34
 		{
 			position[]={10210.259,0.012424059,5300.854};
 			name="ts3";
@@ -1362,240 +1381,13 @@ class Mission
 			type="waypoint";
 			colorName="ColorBlack";
 		};
-		class Item33
+		class Item35
 		{
 			position[]={10234.698,0.089108631,4368.52};
 			name="website";
 			text="Website: exilezombies.com";
 			type="waypoint";
 			colorName="ColorBlack";
-		};
-		class Item34
-		{
-			position[]={13392.2,0,14533.4};
-			name="ExileMarker1";
-			text="Boat trader";
-			type="ExileBoatTraderIcon";
-		};
-		class Item35
-		{
-			position[]={20679,0,15645.8};
-			name="ExileMarker2";
-			text="Vehicle trader";
-			type="ExileTraderZoneIcon";
-		};
-		class Item36
-		{
-			position[]={20821.9,0,7207.5098};
-			name="ExileMarker3";
-			text="Aircraft trader";
-			type="ExileAircraftTraderIcon";
-		};
-		class Item37
-		{
-			position[]={9219.4297,0,11462.3};
-			name="ExileMarker4";
-			text="Equipment";
-			type="ExileTraderZoneIcon";
-		};
-		class Item38
-		{
-			position[]={3152.5901,0,13109.9};
-			name="ExileMarker5";
-			text="Office";
-			type="ExileTraderZoneIcon";
-		};
-		class Item39
-		{
-			position[]={6232.5898,0,16255.3};
-			name="ExileMarker6";
-			text="Hardware";
-			type="ExileTraderZoneIcon";
-		};
-		class Item40
-		{
-			position[]={5888.9102,0,20096.801};
-			name="ExileMarker7";
-			text="Waste Dump";
-			type="ExileTraderZoneIcon";
-		};
-		class Item41
-		{
-			position[]={4841.4702,0,21920.1};
-			name="ExileMarker8";
-			type="ExileSpecOpsTraderIcon";
-		};
-		class Item42
-		{
-			position[]={3109.6201,0,13131.6};
-			name="ExileMarker10";
-			markerType="ELLIPSE";
-			type="ExileNonConstructionZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=800;
-			b=800;
-			drawBorder=1;
-		};
-		class Item43
-		{
-			position[]={13361.6,0,14513.4};
-			name="ExileMarker11";
-			markerType="ELLIPSE";
-			type="ExileNonConstructionZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=800;
-			b=800;
-			drawBorder=1;
-		};
-		class Item44
-		{
-			position[]={9172.5098,0,11415.1};
-			name="ExileMarker12";
-			markerType="ELLIPSE";
-			type="ExileNonConstructionZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=800;
-			b=800;
-			drawBorder=1;
-		};
-		class Item45
-		{
-			position[]={21014.723,27.758247,7012.5664};
-			name="ExileMarker13";
-			markerType="ELLIPSE";
-			type="ExileNonConstructionZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=800;
-			b=800;
-			drawBorder=1;
-		};
-		class Item46
-		{
-			position[]={20694.4,0,15573.7};
-			name="ExileMarker14";
-			markerType="ELLIPSE";
-			type="ExileNonConstructionZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=800;
-			b=800;
-			drawBorder=1;
-		};
-		class Item47
-		{
-			position[]={5935.7402,0,20147.1};
-			name="ExileMarker15";
-			markerType="ELLIPSE";
-			type="ExileNonConstructionZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=800;
-			b=800;
-			drawBorder=1;
-		};
-		class Item48
-		{
-			position[]={6294.5298,0,16229};
-			name="ExileMarker16";
-			markerType="ELLIPSE";
-			type="ExileNonConstructionZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=800;
-			b=800;
-			drawBorder=1;
-		};
-		class Item49
-		{
-			position[]={13938.072,44.057384,20334.234};
-			name="ExileMarker17";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=500;
-			b=500;
-			drawBorder=1;
-		};
-		class Item50
-		{
-			position[]={21835.9,0,20963.6};
-			name="ExileMarker18";
-			markerType="ELLIPSE";
-			type="ExileContaminatedZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=600;
-			b=600;
-			drawBorder=1;
-		};
-		class Item51
-		{
-			position[]={21835.9,0,20963.6};
-			name="ExileMarker19";
-			text="Bandit territory";
-			type="ExileContaminatedZoneIcon";
-			colorName="ColorBrown";
-		};
-		class Item52
-		{
-			position[]={28211.1,0,25644.301};
-			name="ExileMarker20";
-			markerType="ELLIPSE";
-			type="ExileContaminatedZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=600;
-			b=600;
-			drawBorder=1;
-		};
-		class Item53
-		{
-			position[]={28211.1,0,25644.301};
-			name="ExileMarker21";
-			text="Bandit territory";
-			type="ExileContaminatedZoneIcon";
-			colorName="ColorBrown";
-		};
-		class Item54
-		{
-			position[]={6456.0889,187.15897,12289.828};
-			name="ExileMarker22";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=500;
-			b=500;
-			drawBorder=1;
-		};
-		class Item55
-		{
-			position[]={17425.5,0,13179.3};
-			name="ExileMarker23";
-			markerType="ELLIPSE";
-			type="ExileNonConstructionZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=1000;
-			b=1000;
-			drawBorder=1;
-		};
-		class Item56
-		{
-			position[]={4938.8486,337.2186,21875.908};
-			name="ExileMarker24";
-			markerType="ELLIPSE";
-			type="ExileNonConstructionZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=1000;
-			b=1000;
-			drawBorder=1;
 		};
 	};
 };

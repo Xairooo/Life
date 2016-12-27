@@ -2305,7 +2305,7 @@ class CfgSettings
 		useStackedEH = 1;
 
 		// If you set this to 1 ...........................................
-		iReallyWantToGetHackedAndImRetarded = 1;
+		iReallyWantToGetHackedAndImRetarded = 0;
 	};
 
 	///////////////////////////////////////////////////////////////////////
@@ -2495,7 +2495,6 @@ class CfgSettings
 			"Exile_Item_XM8",
 			"TRYK_B_Medbag",
 			"ItemRadio",
-			"Exile_Headgear_SantaHat",
 			"Exile_Item_PlasticBottleFreshWater",
 			"Exile_Item_Bandage",
 			"Exile_Item_Heatpack",
@@ -2573,7 +2572,7 @@ class CfgSettings
 		* Vehicle ammount per grid
 		* kinda self explanitory
 		*/
-		vehiclesGridAmount = 0;
+		vehiclesGridAmount = 1;
 
 		/**
 		* Creates global markers for vehicle spawn tweeking,
@@ -2895,7 +2894,7 @@ class CfgSettings
 		/*
 			A list of events that are active
 		*/
-		enabledEvents[] = {"SupplyBox", "AbandonedSafe", "AmbientFlyOver", "EarthQuake"};
+		enabledEvents[] = {"SupplyBox", "AbandonedSafe", "AmbientFlyOver"};
 
 		class EarthQuake 
 		{

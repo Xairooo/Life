@@ -86,17 +86,17 @@ ZCP_RewardWeightForRandomChoice = [
 
 // Server will keep as many missions up as ZCP_MaxMissions, And they will be randomly chosen from the following list
 
-ZCP_MaxMissions = 2; // Amount of cap points at the same time when ZCP_MaxMissionsRelativeToPlayers = false
+ZCP_MaxMissions = 4; // Amount of cap points at the same time when ZCP_MaxMissionsRelativeToPlayers = false
 
 ZCP_Minimum_Online_Players = 0; // Amount of players to be online before it allows to spawn a capture point. !!! O = always
 
 ZCP_MaxMissionsRelativeToPlayers = true; // ZCP_MaxMissions will be ignored if true. ZCP_RelativeMaxMissions will be used
 ZCP_RelativeMaxMissions = [
     //[ min players,  amount of cappoints],
-    [5, 1],
-    [15, 2],
-    [40, 3],
-    [65, 4]
+    [5, 2],
+    [15, 4],
+    [40, 5],
+    [65, 6]
 ];
 ZCP_SecondsCheckPlayers = 600; // seconds for loop check if the server holds more players now (and spawn extra cappoints). ( 600 = every 10 minuts)
 

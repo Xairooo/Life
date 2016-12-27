@@ -28,5 +28,4 @@ if (!isNil "PublicServerVersion") then
 	format ["Server is up and running! Version: %1", PublicServerVersion] call ExileServer_util_log;
 	call ExileServer_system_garbageCollector_start;
 	call ExileServer_system_rcon_event_ready;
-	[] spawn TFAR_fnc_TaskForceArrowheadRadioInit;
 };

@@ -41,7 +41,6 @@ ExileReborn_playerIsInfected = profileNamespace getVariable ["ExileReborn_player
 [240, JohnO_fnc_temperatureStatsUpdate, [], true] call ExileClient_system_thread_addtask;
 [1, JohnO_fnc_handleCustomEffects, [], true] call ExileClient_system_thread_addtask;
 [600, JohnO_fnc_handleSurvivorSpawns, [], true] call ExileClient_system_thread_addtask;
-[300, JohnO_fnc_handlePlayerZombieDetection, [], true] call ExileClient_system_thread_addtask;
 [2, JohnO_fnc_handlePlayerActions, [], true] call ExileClient_system_thread_addtask;
 [600, JohnO_fnc_displayHints, [], true] call ExileClient_system_thread_addtask;
 [180, JohnO_fnc_handleDeadAnimalWarmth, [], true] call ExileClient_system_thread_addtask;

@@ -66,11 +66,6 @@ class CfgExilecustomCode
     // Custom sound on hit
     //ExileClient_object_player_event_onHit = "overrides\ExileClient_object_player_event_onHit.sqf";
     /** Server overrides **/
-
-    // Esseker spawn fix
-    ExileServer_object_player_createBambi = "overrides\server\ExileServer_object_player_createBambi.sqf";
-    // manipulate garbage collection
-    ExileServer_system_garbageCollector_unscheduled_deleteAllDead = "overrides\server\ExileServer_system_garbageCollector_unscheduled_deleteAllDead.sqf";
     // Allow server to check season for key frames
     ExileServer_system_weather_thread_weatherSimulation = "overrides\server\ExileServer_system_weather_thread_weatherSimulation.sqf";
     // Make sticks n leaves spawn when cutting trees

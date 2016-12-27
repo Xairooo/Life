@@ -34,8 +34,6 @@ forEach
 	["JohnO_fnc_scavengeWheel","Client_scriptsAndFunctions\Functions\JohnO_fnc_scavengeWheel.sqf"],
 	["JohnO_fnc_repairchopperhalf","Client_scriptsAndFunctions\Functions\JohnO_fnc_repairchopperhalf.sqf"],
 	["JohnO_fnc_repairchopper","Client_scriptsAndFunctions\Functions\JohnO_fnc_repairchopper.sqf"],
-	// Zombies
-	["JohnO_fnc_handlePlayerZombieDetection","Client_scriptsAndFunctions\Functions\JohnO_fnc_handlePlayerZombieDetection.sqf"],
 	// Season
 	["JohnO_fnc_getCurrentSeason","Client_scriptsAndFunctions\Functions\JohnO_fnc_getCurrentSeason.sqf"],
 	// Rest at fire
