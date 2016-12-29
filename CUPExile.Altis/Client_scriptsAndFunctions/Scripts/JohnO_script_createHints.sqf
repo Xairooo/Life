@@ -9,7 +9,7 @@ ExileReborn_hintArray =
 	"You can rest by a lit fire to heal",
 	"If you are shot, your wounds can become infected, clean them via your Xm8 apps",
 	"Infection will slowly kill you, use Vishpirin  and water to clear your infection",
-	"Exile Reborn is not designed to be easy, survive or leave but don't complain",
+	"ExileZombies.com is not designed to be easy, survive or leave but don't complain",
 	"Vehicles are persistent",
 	"You are required to manually refuel vehicles - Auto refueling is disabled by design",
 	"You can apply aid to other players via scroll wheel actions",

@@ -2,7 +2,7 @@
 /// ALTIS ///////////
 /////////////////////
 
-ExileRebornVersion = "0.8.3";
+ExileRebornVersion = "0.8.4";
 publicVariable "ExileRebornVersion";
 
 Event_DEBUG_Location = [0,0,0];
@@ -89,7 +89,7 @@ Event_warmAnimals = [];
 Event_lightningSpawnInterval = 2400;
 
 /** Convoy Settings -- DO NOT USE CONVOY **/
-/*
+
 Event_Convoy_Duration = 2700;														// Duration the convoy will last before self terminating
 Event_Convoy_MinScriptDelay = 1600; 												// Minimum amount of time between convoy events
 Event_Convoy_MaxScriptDelay = 4000; 												// Maximum amount of time between convoy events
@@ -109,7 +109,7 @@ Event_Convoy_EscortVehicleRear = "Exile_Car_HMMWV_M134_Desert"; 					// Escort v
 Event_Convoy_EscortChopper = "Exile_Chopper_Huey_Armed_Desert"; 					// Escort chopper, follows the convoy at the rear
 
 /** Convoy Safe pos settings **/
-/*
+
 Event_Convoy_Min = 5; 																// Minimum distance from center position in meters
 Event_Convoy_MaxDist = 25000;														// Maximum position from center position in meters	
 Event_Convoy_MinDist = 5;															// Minimum distance from objects		
@@ -122,7 +122,7 @@ Event_Convoy_WayPointThree = [5804.46,7667.04,0]; 									// Waypoint 3 - Waypo
 
 Event_Convoy_MarkerType = "ExileMissionDifficultIcon"; 								// Convoy marker type
 Event_Convoy_MarkerText = "Supply Convoy"; 											// Convoy marker text
-*/
+
 
 /** Air Patrol Settings **/
 
@@ -307,7 +307,7 @@ Event_RadAI_CurrentAlive = 0;
 uiSleep 20;
 
 [] execVM "JohnOs_events\addons\Events\airPatrol\airPatrol.sqf";
-//[] execVM "JohnOs_events\addons\Events\Convoy\JohnO_fnc_Convoy.sqf";
+[] execVM "JohnOs_events\addons\Events\Convoy\JohnO_fnc_Convoy.sqf";
 [] execVM "JohnOs_events\addons\Events\Adjust_Server_DateAndTime.sqf";
 [] execVM "JohnOs_events\addons\Events\Persistent_vehicles\spawn_vehicles.sqf";
 [] execVM "JohnOs_events\addons\Events\spawnAnimals\ExileClient_object_animal_spawn.sqf";

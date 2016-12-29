@@ -74,5 +74,9 @@ class CfgExilecustomCode
     ExileServer_system_event_earthQuake_start = "overrides\server\ExileServer_system_event_earthQuake_start.sqf";
     // more room for larger vehicles to spawn
     ExileServer_system_trading_network_purchaseVehicleRequest = "overrides\server\ExileServer_system_trading_network_purchaseVehicleRequest.sqf";
+
+	//Anti-Theft System
+	ExileClient_object_player_event_onLeaveSafezone = "Anti-theft\ExileClient_object_player_event_onLeaveSafezone.sqf";
+	ExileClient_gui_wasteDumpDialog_show = "Anti-theft\ExileClient_gui_wasteDumpDialog_show.sqf";
 	
 };

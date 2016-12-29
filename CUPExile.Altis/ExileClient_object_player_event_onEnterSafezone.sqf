@@ -22,13 +22,14 @@ if !(_vehicle isEqualTo player) then
 	if (local _vehicle) then 
 	{
 		_vehicle allowDamage false;
+		["XG_EnterSafeZone",[_vehicle,player]] call ExileClient_system_network_send;
 	};
 	_attachedObjects = attachedObjects _vehicle;
 	if !(_attachedObjects isEqualTo []) then 
 	{
 		_position = getPosATL _vehicle;
 		{
-			if ((_x isKindOf "PipeBombBase")) then
+			if ((typeOf _x) in ["PipeBombBase", "DemoCharge_Remote_Mag", "SatchelCharge_Remote_Mag"]) then
 			{
 				detach _x;
 				_x setPosATL [(_position select 0) + random 2, (_position select 1) + random 2, 0.05];
@@ -47,7 +48,7 @@ else
 	{
 		_position = getPosATL _vehicle;
 		{
-			if ((_x isKindOf "PipeBombBase")) then
+			if ((typeOf _x) in ["PipeBombBase", "DemoCharge_Remote_Mag", "SatchelCharge_Remote_Mag"]) then
 			{
 				detach _x;
 				_x setPosATL [(_position select 0) + random 2, (_position select 1) + random 2, 0.05];
@@ -58,6 +59,7 @@ else
 	};
 };
 ExileClientSafeZoneESPEventHandler = addMissionEventHandler ["Draw3D", {20 call ExileClient_gui_safezone_safeESP}];
+["InfoTitleAndText", ["Welcome!", "You have entered a trader city safe zone."]] call ExileClient_gui_toaster_addTemplateToast; 
 ["SafezoneEnter"] call ExileClient_gui_notification_event_addNotification;
 ExileClientSafeZoneUpdateThreadHandle = [1, ExileClient_object_player_thread_safeZone, [], true] call ExileClient_system_thread_addtask;
 true

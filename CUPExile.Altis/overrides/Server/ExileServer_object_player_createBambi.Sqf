@@ -146,6 +146,145 @@ else
 {
 	_spawnType = 0;
 };
+
+_score = (_accountData select 1);
+if((getPlayerUID _requestingPlayer) in ["PLAYERUIDHERE"]) then {
+     clearWeaponCargo _bambiPlayer; // clears items
+     clearMagazineCargo _bambiPlayer; // clears items
+     _bambiPlayer forceAddUniform "U_O_FullGhillie_sard"; // adds uniforms
+     _bambiPlayer addVest "V_HarnessOGL_gry";
+     _bambiPlayer addWeapon "Exile_Item_XM8";
+     _bambiPlayer addWeapon "ItemCompass";
+     _bambiPlayer addWeapon "ItemMap";
+     _bambiPlayer addWeapon "ItemRadio";
+     _bambiPlayer addWeapon "ItemGPS";
+      _bambiPlayer addWeapon "Rangefinder";
+     _bambiPlayer addItem "NVGoggles_INDEP";
+     _bambiPlayer assignItem "NVGoggles_INDEP";
+     _bambiPlayer addBackpack "B_Carryall_cbr";
+      _bambiPlayer addItemToBackpack "HandGrenade";
+      _bambiPlayer addWeapon "srifle_GM6_camo_F";
+      _bambiPlayer addPrimaryWeaponItem "optic_KHS_blk";
+      _bambiPlayer addMagazines ["5Rnd_127x108_Mag", 4];
+      _bambiPlayer addWeapon "hgun_Pistol_heavy_01_F";
+      _bambiPlayer addHandgunItem "muzzle_snds_acp";
+      _bambiPlayer addMagazines ["11Rnd_45ACP_Mag", 3];
+     _bambiPlayer addItemToVest "Exile_Item_EMRE";
+     _bambiPlayer addItemToVest "Exile_Item_EnergyDrink";
+     _bambiPlayer addItemToVest "Exile_Item_InstaDoc";
+     _bambiPlayer addItemToVest "Exile_Item_DuctTape";
+     _bambiPlayer addItemToUniform "Exile_Item_Bandage";
+     _bambiPlayer addItemToUniform "Exile_Item_Wrench";
+} else {
+	if ((getPlayerUID _requestingPlayer) in ["PLAYERUIDHERE"]) then {
+		clearWeaponCargo _bambiPlayer; // clears items
+		clearMagazineCargo _bambiPlayer; // clears items
+		_bambiPlayer forceAddUniform "U_O_FullGhillie_sard"; // adds uniforms
+		_bambiPlayer addVest "V_HarnessOGL_gry";
+		_bambiPlayer addWeapon "Exile_Item_XM8";
+		_bambiPlayer addWeapon "ItemCompass";
+		_bambiPlayer addWeapon "ItemMap";
+		_bambiPlayer addWeapon "ItemRadio";
+		_bambiPlayer addWeapon "ItemGPS";
+    _bambiPlayer addWeapon "Rangefinder";
+		_bambiPlayer addItem "NVGoggles_INDEP";
+		_bambiPlayer assignItem "NVGoggles_INDEP";
+		_bambiPlayer addBackpack "B_Carryall_cbr";
+    _bambiPlayer addItemToBackpack "HandGrenade";
+    //_bambiPlayer [player,"srifle_GM6_camo_F",4] call BIS_fnc_addWeapon;
+  //  _bambiPlayer {player addPrimaryWeaponItem _x} forEach ["optic_KHS_blk"];
+  //  _bambiPlayer [player,"hgun_Pistol_heavy_01_F",4] call BIS_fnc_addWeapon;
+  //  _bambiPlayer {player addHandgunItem _x} forEach ["muzzle_snds_acp"];
+    _bambiPlayer addWeapon "srifle_GM6_camo_F";
+    _bambiPlayer addPrimaryWeaponItem "optic_KHS_blk";
+    _bambiPlayer addMagazines ["5Rnd_127x108_Mag", 4];
+    _bambiPlayer addWeapon "hgun_Pistol_heavy_01_F";
+    _bambiPlayer addHandgunItem "muzzle_snds_acp";
+    _bambiPlayer addMagazines ["11Rnd_45ACP_Mag", 3];
+		_bambiPlayer addItemToVest "Exile_Item_EMRE";
+		_bambiPlayer addItemToVest "Exile_Item_EnergyDrink";
+		_bambiPlayer addItemToVest "Exile_Item_InstaDoc";
+		_bambiPlayer addItemToVest "Exile_Item_DuctTape";
+		_bambiPlayer addItemToUniform "Exile_Item_Bandage";
+		_bambiPlayer addItemToUniform "Exile_Item_Wrench";
+	} else {
+		if(_score > 5000 && _score < 8000) then {
+			clearWeaponCargo _bambiPlayer;
+			clearMagazineCargo _bambiPlayer;
+			hint "5 - 8k respect loadout attached";
+			_bambiPlayer addWeapon 'Exile_Item_XM8';
+			_bambiPlayer addWeapon "ItemCompass";
+			_bambiPlayer addItemToUniform "Exile_Item_BBQSandwich_Cooked";
+			_bambiPlayer addItemToUniform "Exile_Item_PlasticBottleFreshWater";
+		} else {
+			if(_score > 7999 && _score < 10000) then {
+				clearWeaponCargo _bambiPlayer;
+				clearMagazineCargo _bambiPlayer;
+				hint "8 - 10k respect loadout attached";
+				_bambiPlayer forceAddUniform "U_BG_leader";
+				_bambiPlayer addVest "V_Rangemaster_belt";
+				_bambiPlayer addWeapon 'Exile_Item_XM8';
+				_bambiPlayer addWeapon "ItemCompass";
+				_bambiPlayer addItemToVest "Exile_Item_BBQSandwich_Cooked";
+				_bambiPlayer addItemToVest "Exile_Item_PlasticBottleFreshWater";
+				_bambiPlayer addItemToVest "Exile_Item_PlasticBottleFreshWater";
+			} else {
+				if(_score > 9999 && _score < 15000) then {
+					clearWeaponCargo _bambiPlayer;
+					clearMagazineCargo _bambiPlayer;
+					hint "10 - 15k respect loadout attached";
+					_bambiPlayer forceAddUniform "U_BG_leader";
+					_bambiPlayer addVest "V_BandollierB_oli";
+					_bambiPlayer addWeapon 'Exile_Item_XM8';
+					_bambiPlayer addWeapon "ItemCompass";
+					_bambiPlayer addItemToVest "Exile_Item_BBQSandwich_Cooked";
+					_bambiPlayer addItemToVest "Exile_Item_PlasticBottleFreshWater";
+				} else {
+					if(_score > 14999 && _score < 20000) then {
+						clearWeaponCargo _bambiPlayer;
+						clearMagazineCargo _bambiPlayer;
+						hint "15 - 20k respect loadout attached";
+						_bambiPlayer forceAddUniform "U_BG_leader";
+						_bambiPlayer addVest "V_PlateCarrier1_rgr";
+						_bambiPlayer addWeapon 'Exile_Item_XM8';
+						_bambiPlayer addWeapon "ItemCompass";
+						_bambiPlayer addItemToUniform "Exile_Item_BBQSandwich_Cooked";
+						_bambiPlayer addItemToUniform "Exile_Item_PlasticBottleFreshWater";
+					} else {
+						if(_score > 19999 && _score < 30000) then {
+							clearWeaponCargo _bambiPlayer;
+							clearMagazineCargo _bambiPlayer;
+							hint "20 - 30k respect loadout attached";
+							_bambiPlayer forceAddUniform "U_BG_leader";
+							_bambiPlayer addVest "V_PlateCarrier1_rgr";
+							_bambiPlayer addWeapon "ItemGPS";
+							_bambiPlayer addWeapon 'Exile_Item_XM8';
+							_bambiPlayer addWeapon "ItemCompass";
+							_bambiPlayer addItemToUniform "Exile_Item_BBQSandwich_Cooked";
+							_bambiPlayer addItemToUniform "Exile_Item_PlasticBottleFreshWater";
+						} else {
+							if(_score > 29999) then {
+								clearWeaponCargo _bambiPlayer;
+								clearMagazineCargo _bambiPlayer;
+								hint "30k+ respect loadout attached";
+								_bambiPlayer forceAddUniform "U_I_CombatUniform";
+								_bambiPlayer addVest "V_PlateCarrier1_rgr";
+								_bambiPlayer addWeapon "ItemGPS";
+								_bambiPlayer addWeapon 'Exile_Item_XM8';
+								_bambiPlayer addWeapon "ItemCompass";
+								_bambiPlayer addItemToUniform "Exile_Item_BBQSandwich_Cooked";
+								_bambiPlayer addItemToUniform "Exile_Item_PlasticBottleFreshWater";
+								_bambiPlayer addItemToUniform "Exile_Item_InstaDoc";
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+
+
 _bambiPlayer addMPEventHandler ["MPKilled", {_this call ExileServer_object_player_event_onMpKilled}];
 _bambiPlayer call ExileServer_object_player_database_insert;
 _bambiPlayer call ExileServer_object_player_database_update;

@@ -10,7 +10,7 @@ if (isNull _positions) then
 */
 _spawnPosition = selectRandom _positions;
 
-format["ExileReborn - Spawned a survivor near player -- %1 @ %2", _target,_spawnPosition] call ExileServer_util_log;
+format["ExileZombies.com - Spawned a survivor near player -- %1 @ %2", _target,_spawnPosition] call ExileServer_util_log;
 
 _group = createGroup resistance;
 _group setCombatMode "RED";

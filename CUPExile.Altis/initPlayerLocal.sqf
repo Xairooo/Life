@@ -4,9 +4,6 @@
  */
  
 if (!hasInterface || isServer) exitWith {};
- 
-setTerrainGrid 3.125;
-setViewDistance 1500;
 
 //Wasserzeichen
 _pic = "logo.jpg";
