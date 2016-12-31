@@ -35,7 +35,6 @@ if !(isServer) then
 [] execVM "ClaimVehicles_Client\ClaimVehicles_Client_init.sqf";
 [] execVM "custom\EnigmaRevive\init.sqf";
 [] execVM "custom\Welcome.sqf";
-[] execVM "addons\welcome\welcome.sqf";
 [] execVM "ETG_LoginrewardScript.sqf";
 // Igiload
 [] execVM "IgiLoad\IgiLoadInit.sqf";

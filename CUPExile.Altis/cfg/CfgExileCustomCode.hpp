@@ -30,7 +30,6 @@ class CfgExilecustomCode
 	//Update to 1.66
 	ExileClient_gui_postProcessing_initialize = "fixes\ExileClient_gui_postProcessing_initialize.sqf";
 	ExileClient_gui_postProcessing_reset = "fixes\ExileClient_gui_postProcessing_reset.sqf";
-	ExileClient_gui_postProcessing_toggleDialogBackgroundBlur = "fixes\ExileClient_gui_postProcessing_toggleDialogBackgroundBlur.sqf";
 	ExileClient_object_player_death_startBleedingOut = "fixes\ExileClient_object_player_death_startBleedingOut.sqf";
 	ExileClient_object_player_event_onKilled = "fixes\ExileClient_object_player_event_onKilled.sqf";
 

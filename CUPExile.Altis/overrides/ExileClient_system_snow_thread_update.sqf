@@ -44,7 +44,7 @@ if (ExileClientEnvironmentTemperature < 6) then
 {	
 	if !(vehicle player != player) then 
 	{
-		if ((_posASL >= 200) && (overcast >= 0.3)) then
+		if ((_posASL >= 100) && (overcast >= 0.3) && (random 1 > 0)) then
 		{
 			_enableSnow = true;
 			ExileSnowClose attachTo [vehicle player, [0, 4, 1]];

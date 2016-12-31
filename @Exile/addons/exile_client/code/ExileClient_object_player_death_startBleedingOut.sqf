@@ -16,9 +16,6 @@ ExileClientPostProcessingColorCorrections ppEffectAdjust [1, 1, 0, [0, 0, 0, 0],
 ExileClientPostProcessingColorCorrections ppEffectCommit 0;
 ExileClientPostProcessingColorCorrections ppEffectAdjust [1, 1, 0, [0.4, 0.2, 0.3, 0], [0.3, 0.05, 0, 0], [0.5,0.5,0.5,0], [0,0,0,0,0,0,4]];
 ExileClientPostProcessingColorCorrections ppEffectCommit _respawnDelay; 
-BIS_DeathBlur ppEffectAdjust [0];
-BIS_DeathBlur ppEffectCommit 0;
-BIS_DeathBlur ppEffectEnable false;
 ExileClientPostProcessingBackgroundBlur ppEffectAdjust [0];
 ExileClientPostProcessingBackgroundBlur ppEffectCommit 0;
 ExileClientPostProcessingBackgroundBlur ppEffectEnable true;

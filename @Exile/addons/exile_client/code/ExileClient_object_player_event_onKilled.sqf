@@ -8,7 +8,7 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
-[_this select 0, _this select 1, 3, 120] call ExileClient_object_player_event_onPlayerKilled;
+ 
 closeDialog 0;
 ExileClientLastDiedPlayerObject = player;
 ExileClientIsAutoRunning = false;

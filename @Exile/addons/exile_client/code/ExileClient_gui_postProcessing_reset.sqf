@@ -17,8 +17,4 @@ ExileClientPostProcessingBackgroundBlur ppEffectCommit 0;
 ExileClientPostProcessingDelirium ppEffectAdjust [2, 0.1, 0.1, 0.2, 0.2, 2, 2, 0.01, 0.01, 0.01, 0.01, 0.01, 0.1, 2, 2];
 ExileClientPostProcessingDelirium ppEffectCommit 0;
 ExileClientPostProcessingDelirium ppEffectEnable false;
-BIS_DeathBlur ppEffectAdjust [0];
-BIS_DeathBlur ppEffectCommit 0;
-BIS_DeathBlur ppEffectEnable false;
-
 true
