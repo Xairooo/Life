@@ -145,7 +145,7 @@
                         {2399.29009036182, "Exile_Item_Noodles"}, // 0.42%
                         {2441.45695065183, "Exile_Item_Cheathas"}, // 0.42%
                         {2483.62381094183, "Exile_Item_Surstromming"}, // 0.42%
-                        {2522.99388968199, "30Rnd_45ACP_Mag_SMG_01_Tracer_Green"}, // 0.39%
+                        {2522.99388968199, "ItemMap"}, // 0.39%
                         {2562.36396842215, "30Rnd_45ACP_Mag_SMG_01"}, // 0.39%
                         {2599.10937524629, "Exile_Item_Beer"}, // 0.37%
                         {2635.49096616129, "U_C_Poloshirt_burgundy"}, // 0.36%
@@ -935,7 +935,7 @@
                         {3445.69672131147, "Chemlight_green"}, // 0.39%
                         {3484.75922131147, "CUP_srifle_DMR"}, // 0.39%
                         {3523.82172131147, "CUP_srifle_SVD_des_ghillie_pso"}, // 0.39%
-                        {3562.88422131147, "CUP_srifle_SVD_wdl_ghillie"}, // 0.39%
+                        {3562.88422131147, "ItemMap"}, // 0.39%
                         {3601.94672131147, "Chemlight_blue"}, // 0.39%
                         {3641.00922131147, "CUP_srifle_LeeEnfield"}, // 0.39%
                         {3680.07172131147, "V_Rangemaster_belt"}, // 0.39%
@@ -1852,7 +1852,7 @@
                         {3531.9599261706, "Chemlight_blue"}, // 0.74%
                         {3605.48933793531, "FlareRed_F"}, // 0.74%
                         {3679.01874970001, "FlareWhite_F"}, // 0.74%
-                        {3752.54816146472, "FlareYellow_F"}, // 0.74%
+                        {3752.54816146472, "ItemMap"}, // 0.74%
                         {3826.07757322943, "Chemlight_red"}, // 0.74%
                         {3899.60698499413, "Chemlight_green"}, // 0.74%
                         {3973.13639675884, "Chemlight_yellow"}, // 0.74%

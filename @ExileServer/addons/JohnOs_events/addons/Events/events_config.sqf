@@ -2,11 +2,11 @@
 /// ALTIS ///////////
 /////////////////////
 
-ExileRebornVersion = "0.8.4";
+ExileRebornVersion = "1.0.0";
 publicVariable "ExileRebornVersion";
 
 Event_DEBUG_Location = [0,0,0];
-Persistent_UID = "76561197972232595";												// Change me..
+Persistent_UID = "76561198074208389";												// Change me..
 Event_extraDebugLogging = true;
 
 Event_world_size = 0;

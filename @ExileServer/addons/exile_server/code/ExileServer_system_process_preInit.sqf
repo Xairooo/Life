@@ -27,3 +27,4 @@ if !(getRemoteSensorsDisabled) then
 PublicServerIsLoaded = false; 
 PublicServerVersion = getText(configFile >> "CfgMods" >> "Exile" >> "version");
 publicVariable "PublicServerVersion";
+[] spawn TFAR_fnc_TaskForceArrowheadRadioInit;

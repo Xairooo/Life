@@ -16,6 +16,12 @@ _maxOfEach = 2;
 _position = _this select 0;
 
 _items =[
+"ItemMap",
+"ItemMap",
+"ItemMap",
+"ItemMap",
+"ItemMap",
+"ItemMap",
 "B_Carryall_cbr",
 "B_Carryall_khk",
 "B_Carryall_mcamo",

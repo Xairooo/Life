@@ -10,6 +10,7 @@ Useful =
 	"Exile_Item_Matches",
 	"Exile_Item_DuctTape",
 	"Exile_Item_CookingPot",
+	"ItemMap",
 	"16Rnd_9x21_Mag"
 	
 	] call BIS_fnc_selectRandom;
@@ -21,6 +22,7 @@ DocAnd9mm =
 	_return = [
 	
 	"Exile_Item_InstaDoc",
+	"ItemMap",
 	"16Rnd_9x21_Mag"
 	
 	] call BIS_fnc_selectRandom;
@@ -38,6 +40,7 @@ DocAndAmmo =
 	"Exile_Item_InstaDoc",
 	"Exile_Item_InstaDoc",
 	"Exile_Item_InstaDoc",
+	"ItemMap",
 	"10Rnd_338_Mag",
 	"130Rnd_338_Mag",
 	"7Rnd_408_Mag",

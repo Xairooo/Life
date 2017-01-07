@@ -1,0 +1,5 @@
+///'CUPExile.Altis.pbo' from Mikero's dos tools, dll version 5.66///
+prefix=CUPExile.Altis
+Pbo Type is: Arma Mission Addon
+Sha: '24B3C6B432D2BA42267079A3764203DBC90AE66D'
+//////</HEADER>//////

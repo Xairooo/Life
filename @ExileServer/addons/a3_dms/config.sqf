@@ -52,7 +52,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 /* Mission System Settings */
 	/*General settings for dynamic missions*/
 	DMS_DynamicMission					= true;						// Enable/disable dynamic mission system.
-	DMS_MaxBanditMissions				= 8;						// Maximum number of Bandit Missions running at the same time
+	DMS_MaxBanditMissions				= 4;						// Maximum number of Bandit Missions running at the same time
 	DMS_TimeToFirstMission				= [180,420];				// [Minimum,Maximum] time between first mission spawn. | DEFAULT: 3-7 minutes.
 	DMS_TimeBetweenMissions				= [600,900];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
 	DMS_MissionTimeOut					= [900,1800]; 				// [Minimum,Maximum] time it will take for a mission to timeout | DEFAULT: 15-30 mins
@@ -169,14 +169,14 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	/*Crate/Box settings*/
 
 	/*Mine settings*/
-	DMS_SpawnMinefieldForEveryMission	= true;					// Whether or not to spawn a minefield for every dynamic mission.
-	DMS_SpawnMinesAroundMissions		= true;						// Whether or not to spawn mines around AI missions that have them.
+	DMS_SpawnMinefieldForEveryMission	= false;					// Whether or not to spawn a minefield for every dynamic mission.
+	DMS_SpawnMinesAroundMissions		= false;						// Whether or not to spawn mines around AI missions that have them.
 	DMS_despawnMines_onCompletion		= true;						// Despawn mines spawned around missions when the mission is completed
 	DMS_MineInfo_easy					= [5,50];					// Mine info for "easy" missions. This will spawn 5 mines within a 50m radius.
 	DMS_MineInfo_moderate				= [10,50];					// Mine info for "moderate" missions. This will spawn 10 mines within a 50m radius.
 	DMS_MineInfo_difficult				= [15,75];					// Mine info for "difficult" missions. This will spawn 15 mines within a 75m radius.
 	DMS_MineInfo_hardcore				= [25,100];					// Mine info for "hardcore" missions. This will spawn 25 mines within a 100m radius.
-	DMS_SpawnMineWarningSigns			= true;						// Whether or not to spawn mine warning signs around a minefield.
+	DMS_SpawnMineWarningSigns			= false;						// Whether or not to spawn mine warning signs around a minefield.
 	DMS_BulletProofMines				= false;						// Whether or not you want to make the mines bulletproof. Prevents players from being able to shoot the mines and creating explosions.
 	/*Mine settings*/
 
@@ -432,8 +432,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_ai_skill_static					= [["aimingAccuracy",0.10],["aimingShake",0.10],["aimingSpeed",0.10],["spotDistance",0.10],["spotTime",0.10],["courage",0.10],["reloadSpeed",0.10],["commanding",0.10],["general",0.10]];	// Static AI Skills
 	DMS_ai_skill_easy					= [["aimingAccuracy",0.10],["aimingShake",0.10],["aimingSpeed",0.10],["spotDistance",0.10],["spotTime",0.10],["courage",0.10],["reloadSpeed",0.10],["commanding",0.10],["general",0.10]];	// Easy
 	DMS_ai_skill_moderate				= [["aimingAccuracy",0.10],["aimingShake",0.10],["aimingSpeed",0.10],["spotDistance",0.10],["spotTime",0.10],["courage",0.10],["reloadSpeed",0.10],["commanding",0.10],["general",0.10]];	// Moderate
-	DMS_ai_skill_difficult				= [["aimingAccuracy",0.20],["aimingShake",0.10],["aimingSpeed",0.10],["spotDistance",0.10],["spotTime",0.10],["courage",0.10],["reloadSpeed",0.10],["commanding",0.10],["general",0.10]]; 	// Difficult
-	DMS_ai_skill_hardcore				= [["aimingAccuracy",0.20],["aimingShake",0.10],["aimingSpeed",0.10],["spotDistance",0.10],["spotTime",0.10],["courage",0.10],["reloadSpeed",0.10],["commanding",0.10],["general",0.10]]; 	// Hardcore
+	DMS_ai_skill_difficult				= [["aimingAccuracy",0.25],["aimingShake",0.10],["aimingSpeed",0.10],["spotDistance",0.10],["spotTime",0.10],["courage",0.10],["reloadSpeed",0.10],["commanding",0.10],["general",0.10]]; 	// Difficult
+	DMS_ai_skill_hardcore				= [["aimingAccuracy",0.40],["aimingShake",0.30],["aimingSpeed",0.20],["spotDistance",0.15],["spotTime",0.10],["courage",0.10],["reloadSpeed",0.10],["commanding",0.10],["general",0.20]]; 	// Hardcore
 	DMS_ai_skill_random					= ["hardcore","difficult","difficult","difficult","moderate","moderate","moderate","moderate","easy","easy"];	// Skill frequencies for "random" AI skills | Default: 10% hardcore, 30% difficult, 40% moderate, and 20% easy
 	DMS_ai_skill_randomDifficult		= ["hardcore","hardcore","difficult","difficult","difficult"];	// 60% chance for "difficult", 40% chance for "hardcore" AI.
 	DMS_ai_skill_randomEasy				= ["moderate","moderate","easy","easy","easy"];					// 60% chance for "easy", 40% chance for "moderate" AI.

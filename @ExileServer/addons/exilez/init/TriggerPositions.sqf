@@ -1,5 +1,5 @@
 // ExileZ 2.0 by Patrix87 of http:\\multi-jeux.quebec //
-
+/*
 Military = [         
 [16084,16985,180],      // Telos Military
 [17432,13160,150],      // Pyrgos Military
@@ -94,7 +94,7 @@ Cities = [
 [26733,21213,250],      // Gatolia
 [27002,23215,300]       // Molos
 ];
-
+*/
 
 //NAMALSK
 	
@@ -122,7 +122,7 @@ Cities = [
 */
 
 // TANOA by Mustang
-/*
+
 Military = [
 	[7394.0894,7455.1118,700], 	//tanoa airfield
 	[2143.146,3422.9131,100], 	//sw airfield
@@ -197,4 +197,3 @@ AllCities = [
 	[12781.851,4765.814,200],
 	[11790.316,2262.4255,200]
 ];
-*/

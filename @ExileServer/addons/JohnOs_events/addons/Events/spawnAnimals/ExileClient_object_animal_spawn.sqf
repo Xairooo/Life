@@ -11,7 +11,7 @@
  
 private["_animalType","_animalConfig","_animalClass","_position","_animal","_animalArray"];
 
-"ExileReborn - Spawning world animals" call ExileServer_util_log;
+"ExileZombies.com - Spawning world animals" call ExileServer_util_log;
 
 _animalArray =
 [

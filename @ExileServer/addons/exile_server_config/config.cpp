@@ -2305,7 +2305,7 @@ class CfgSettings
 		useStackedEH = 1;
 
 		// If you set this to 1 ...........................................
-		iReallyWantToGetHackedAndImRetarded = 0;
+		iReallyWantToGetHackedAndImRetarded = 1;
 	};
 
 	///////////////////////////////////////////////////////////////////////
@@ -2491,9 +2491,7 @@ class CfgSettings
 		loadOut[] =
 		{
 			"ItemCompass",
-			"ItemMap", // Because why not
 			"Exile_Item_XM8",
-			"TRYK_B_Medbag",
 			"ItemRadio",
 			"Exile_Item_PlasticBottleFreshWater",
 			"Exile_Item_Bandage",
@@ -2572,7 +2570,7 @@ class CfgSettings
 		* Vehicle ammount per grid
 		* kinda self explanitory
 		*/
-		vehiclesGridAmount = 2;
+		vehiclesGridAmount = 0;
 
 		/**
 		* Creates global markers for vehicle spawn tweeking,
@@ -2751,7 +2749,7 @@ class CfgSettings
 			fogValue = 0;
 			fogDecay = 0;
 			fogBase = 0;
-			overcast = 0.8;
+			overcast = 0.2;
 			waves = 0.2;
 			wind = 0.25;
 			gusts = 0.1;
@@ -2777,11 +2775,11 @@ class CfgSettings
 			fogValue = 0.2;
 			fogDecay = 0.1;
 			fogBase = 5;
-			overcast = 1;
+			overcast = 0.2;
 			waves = 1;
 			wind = 1;
 			gusts = 1;
-			rain = 1;
+			rain = 0;
 			lightnings = 1;
 			rainbows = 0;
 		};
@@ -2799,7 +2797,7 @@ class CfgSettings
 		// time in ARMA FORMAT << CONFIG
 		// https://community.bistudio.com/wiki/setDate
 
-		staticTime[] = {2039,10,24,15,30};
+		staticTime[] = {2017,7,6,07,30};
 	};
 
 
@@ -2813,7 +2811,7 @@ class CfgSettings
 		serverPassword = "elitex22";
 
 		// Autolocks server until its ready to accept players
-		useAutoLock = 1;
+		useAutoLock = 0;
 
 		// Server will autoLock at that time before restart (minutes)
 		restartAutoLock = 7;
@@ -2902,7 +2900,7 @@ class CfgSettings
 			function = "ExileServer_system_event_earthQuake_start";
 			minTime = 60;
 			maxTime = 240;
-			minimumPlayersOnline = 1;
+			minimumPlayersOnline = 5;
 		};
 
 		class SupplyBox 
@@ -2916,7 +2914,7 @@ class CfgSettings
 			function = "ExileServer_system_event_supplyBox_start";
 			minTime = 60; // minutes
 			maxTime = 180; // minutes
-			minimumPlayersOnline = 1;
+			minimumPlayersOnline = 5;
 			dropRadius = 500; // 500m around an airport (including the main airport on Altis!)
 			dropAltitude = 100; // altitude of the drop
 			markerTime = 10; // minutes
@@ -3048,4 +3046,30 @@ class CfgSettings
 		deathLogging = 1;
 		territoryLogging = 1;
 	};
+
+  ///////////////////////////////////////////////////////////////////////
+  // UID LOADOUT CONFIGURATION by Jenartor
+  ///////////////////////////////////////////////////////////////////////
+  class UID_Loadout_Settings{
+  	uidLoadoutMode = 1;
+
+  	uids[] =
+  	{
+		"76561198074208389", // CPT.EliteWarfare
+		"0987654321", // None
+		"1234509876" // None
+  	};
+
+    // ItemList
+  	loadOut[] =
+  	{
+		"ItemCompass",
+		"Exile_Item_XM8",
+		"ItemRadio",
+		"Exile_Item_PlasticBottleFreshWater",
+		"Exile_Item_Bandage",
+		"Exile_Item_Heatpack",
+		"Chemlight_yellow"
+  	};
+  };
 };

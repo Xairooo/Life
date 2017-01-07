@@ -1,0 +1,158 @@
+///////////////////////////////////////////////////////////////////////////////
+// Server Settings - Modify at will
+///////////////////////////////////////////////////////////////////////////////
+author = "Exile Mod Team - Modded by EliteWarfare , Silverado";
+onLoadName = "ExileZombie Mod";
+onLoadMission= "exilezombies.com";
+loadScreen = ""; 
+disableChannels[] = {0, 2};
+OnLoadIntro = "";
+OnLoadIntroTime = false;
+OnLoadMissionTime = false;
+
+class Header
+{
+    gameType = Survive; // Do NOT change this
+    minPlayers = 1;
+    maxPlayers = 100;
+};
+
+///////////////////////////////////////////////////////////////////////////////
+// Exile Settings - Do not change these!
+///////////////////////////////////////////////////////////////////////////////
+forceRotorLibSimulation = 2;
+skipLobby = 1;
+joinUnassigned = 1;
+respawn = "BASE";
+respawnDelay = 120;
+respawnDialog = 0;
+respawnOnStart = 0;
+respawnButton = 1; 
+respawnTemplates[] = {"Exile"};
+corpseManagerMode = 0;
+corpseLimit = 20;
+corpseRemovalMinTime = 1800;
+corpseRemovalMaxTime = 3600;
+wreckManagerMode = 0;
+wreckLimit = 2;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 360;
+scriptedPlayer = 1;
+disabledAI = 1;
+enableItemsDropping = 0;
+briefing = 0;
+debriefing = 0;
+allowFunctionsLog = 1;
+enableDebugConsole = 0; 
+allowFunctionsRecompile = 0;
+showSquadRadar = 0;
+showUAVFeed = 0;
+reviveDelay = 6;
+reviveForceRespawnDelay = 3;
+reviveBleedOutDelay = 120;
+
+showHUD[] = 
+{
+    true,   // Scripted HUD (same as showHUD command)
+    true,   // Vehicle + soldier info
+    true,   // Vehicle radar 
+    true,   // Vehicle compass
+    true,   // Tank direction indicator
+    false,  // Commanding menu
+    false,  // Group Bar
+    true,   // HUD Weapon Cursors
+    false   // Squad Radar
+};
+
+#include "config.cpp"
+#include "CfgRemoteExec.hpp"
+#include "infiSTAR_AdminMenu.hpp"
+#include "Exile_SM_Towing.hpp"
+#include "ExAdClient\ExAd.cpp"
+#include "killboard.hpp"
+#include "scarCODE\ServerInfoMenu\hpp\CfgServerInfoMenu.hpp"
+#include "scarCODE\ServerInfoMenu\hpp\RscDisplayServerInfoMenu.hpp"
+#include "MarXet\dialog\RscMarXetDefines.hpp"
+#include "MarXet\dialog\RscMarXetDialog.hpp"
+#include "sounds.hpp"
+
+class CfgFunctions
+{
+    #include "ExAdClient\CfgFunctions.cpp"
+	#include "TRXClient\CfgFunctions.cpp"
+    class Reborn
+    {
+        class Bootstrap
+        {
+            file="Client_scriptsAndFunctions";
+            class preInit
+            {
+                preInit = 1;
+            };
+        };
+    };
+};
+
+class RscTextNS
+{
+    idc = -1;
+    type = 0;
+    style = 2;
+    LineSpacing = 1.0;
+    h = 0.04;
+    ColorBackground[] = {1,1,1,0.2};
+    ColorText[] = {0.1,0.1,0.1,1};
+    font = "EtelkaMonospacePro";
+    SizeEx = 0.025;
+
+};
+class RscTitles
+{	
+	#include "ExAdClient\RscTitles.cpp"
+	#include "KillMessages.hpp"
+    #include "blowout_rsc.cpp"
+};
+
+class CfgHints
+{
+	#include "ExAdClient\CfgHints.cpp"
+};
+
+class CfgNetworkMessages
+{
+	#include "ExAdClient\CfgNetworkMessages.cpp"
+	#include "MarXet\CfgMarXetNetworkMessages.hpp"
+    #include "Client_scriptsAndFunctions\CfgNetworkMessages.hpp"
+	#include "addons\PlayerAnnounce\cfgNetworkMessages.hpp"
+	
+	class KillMessages
+	{
+		module = "KillMessages";
+		parameters[] = {"STRING","STRING","OBJECT","OBJECT"};
+	};	
+	class XG_EnterSafeZone 
+    {
+        module = "AntiTheft";
+        parameters[] = {"OBJECT","OBJECT"};
+    };
+    class XG_LeftSafeZone
+    {
+        module = "AntiTheft";
+        parameters[] = {"OBJECT"};
+    };
+    class XG_PlayerEnterSafezone
+    {
+        module = "AntiTheft";
+        parameters[] = {"OBJECT"};
+    };
+    class XG_PlayerLeaveSafezone
+    {
+        module = "AntiTheft";
+        parameters[] = {"OBJECT"};
+    };
+    class XG_CheckVariable
+    {
+        module = "AntiTheft";
+        parameters[] = {"OBJECT","OBJECT"};
+    };
+};
